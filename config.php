@@ -10,7 +10,7 @@
 /**
  * Enables the debug mode - NOT FOR PRODUCTION USE!
  */
-define('APP_DEBUG',    true);
+define('APP_DEBUG',    false);
 
 /**
  * Application base directory - Set to a specific sub-dir of your document root. Currently auto-detecting the sub-dir.
