@@ -1,0 +1,20 @@
+<?php
+declare(strict_types=1);
+
+namespace App\Data\Trip;
+
+use Atlas\Mapper\RecordSet;
+
+/**
+ * @method TripRecord offsetGet($offset)
+ * @method TripRecord appendNew(array $fields = [])
+ * @method TripRecord|null getOneBy(array $whereEquals)
+ * @method TripRecordSet getAllBy(array $whereEquals)
+ * @method TripRecord|null detachOneBy(array $whereEquals)
+ * @method TripRecordSet detachAllBy(array $whereEquals)
+ * @method TripRecordSet detachAll()
+ * @method TripRecordSet detachDeleted()
+ */
+class TripRecordSet extends RecordSet
+{
+}

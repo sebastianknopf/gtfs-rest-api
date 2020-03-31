@@ -1,0 +1,12 @@
+### Composer ###
+/vendor/
+
+### PhpStorm ###
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
+### Project ###
+/data/AVG-VBK-SWBAD_j20.db3
+
