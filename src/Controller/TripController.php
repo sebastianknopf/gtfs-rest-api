@@ -9,27 +9,25 @@
 namespace App\Controller;
 
 use App\Data\Trip\Trip;
-use DI\Container;
 use Slim\Http\ServerRequest;
 
+/**
+ * Trip controller class for every request according to the trips resource.
+ *
+ * @package App\Controller
+ */
 class TripController extends BaseController
 {
 
-    protected $orm;
-
-    public function __construct(Container $container) {
-        $this->orm = $container->get('orm');
-    }
-
-    protected function all(ServerRequest $request) {
+    /**
+     * Default selector method - Returns all trip objects in the database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return mixed Array with all trips
+     */
+    protected function findAll(ServerRequest $request) {
         $result = $this->orm->select(Trip::class)->fetchRecords();
         return $result;
-    }
-
-    protected function jsonResponse($resultData) {
-        return [
-            'trips' => $resultData
-        ];
     }
 
 }

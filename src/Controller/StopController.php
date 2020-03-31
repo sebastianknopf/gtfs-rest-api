@@ -9,27 +9,25 @@
 namespace App\Controller;
 
 use App\Data\Stop\Stop;
-use DI\Container;
 use Slim\Http\ServerRequest;
 
+/**
+ * Stop controller class for every request according to the stops resource.
+ *
+ * @package App\Controller
+ */
 class StopController extends BaseController
 {
 
-    protected $orm;
-
-    public function __construct(Container $container) {
-        $this->orm = $container->get('orm');
-    }
-
-    protected function all(ServerRequest $request) {
+    /**
+     * Default selector method - Returns all stop objects in the database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return mixed Array with all stops
+     */
+    protected function findAll(ServerRequest $request) {
         $result = $this->orm->select(Stop::class)->fetchRecords();
-        return $this->jsonResponse($result);
-    }
-
-    protected function jsonResponse($resultData) {
-        return [
-            'stops' => $resultData
-        ];
+        return $result;
     }
 
 }

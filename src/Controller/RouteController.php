@@ -9,27 +9,25 @@
 namespace App\Controller;
 
 use App\Data\Route\Route;
-use DI\Container;
 use Slim\Http\ServerRequest;
 
+/**
+ * Route controller class for every request according to the routes resource.
+ *
+ * @package App\Controller
+ */
 class RouteController extends BaseController
 {
 
-    protected $orm;
-
-    public function __construct(Container $container) {
-        $this->orm = $container->get('orm');
-    }
-
-    protected function all(ServerRequest $request) {
+    /**
+     * Default selector method - Returns all route objects in the database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return mixed Array with all routes
+     */
+    protected function findAll(ServerRequest $request) {
         $result = $this->orm->select(Route::class)->fetchRecords();
         return $result;
-    }
-
-    protected function jsonResponse($resultData) {
-        return [
-            'routes' => $resultData
-        ];
     }
 
 }
