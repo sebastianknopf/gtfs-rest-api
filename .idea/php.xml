@@ -14,7 +14,6 @@
       <path value="$PROJECT_DIR$/vendor/fig/http-message-util" />
       <path value="$PROJECT_DIR$/vendor/slim/psr7" />
       <path value="$PROJECT_DIR$/vendor/slim/http" />
-      <path value="$PROJECT_DIR$/vendor/atlas/orm" />
       <path value="$PROJECT_DIR$/vendor/atlas/pdo" />
       <path value="$PROJECT_DIR$/vendor/atlas/mapper" />
       <path value="$PROJECT_DIR$/vendor/atlas/query" />
@@ -29,6 +28,7 @@
       <path value="$PROJECT_DIR$/vendor/php-di/phpdoc-reader" />
       <path value="$PROJECT_DIR$/vendor/php-di/php-di" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/atlas/orm" />
     </include_path>
   </component>
 </project>

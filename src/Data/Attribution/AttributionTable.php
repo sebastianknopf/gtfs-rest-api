@@ -181,6 +181,7 @@ class AttributionTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'attribution_id'
     ];
 
     const AUTOINC_COLUMN = null;

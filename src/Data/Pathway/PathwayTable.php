@@ -194,6 +194,7 @@ class PathwayTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'pathway_id'
     ];
 
     const AUTOINC_COLUMN = null;

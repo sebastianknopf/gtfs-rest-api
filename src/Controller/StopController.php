@@ -26,8 +26,21 @@ class StopController extends BaseController
      * @return mixed Array with all stops
      */
     protected function findAll(ServerRequest $request) {
-        $result = $this->orm->select(Stop::class)->fetchRecords();
-        return $result;
+        $requestOffset = $request->getParam('offset', 0);
+
+        $query = $this->orm
+            ->select(Stop::class)
+            ->with([
+                'level',
+                'transfers'
+            ])
+            ->limit(500);
+
+        if ($requestOffset > 0) {
+            $query->offset($requestOffset);
+        }
+
+        return $query->fetchRecords();
     }
 
 }

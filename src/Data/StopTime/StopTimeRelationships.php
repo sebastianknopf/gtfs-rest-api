@@ -10,11 +10,20 @@ declare(strict_types=1);
 
 namespace App\Data\StopTime;
 
+use App\Data\Stop\Stop;
+use App\Data\Trip\Trip;
 use Atlas\Mapper\MapperRelationships;
 
 class StopTimeRelationships extends MapperRelationships
 {
     protected function define()
     {
+        $this->manyToOne('trip', Trip::class, [
+            'trip_id' => 'trip_id'
+        ]);
+
+        $this->manyToOne('stop', Stop::class, [
+            'stop_id' => 'stop_id'
+        ]);
     }
 }

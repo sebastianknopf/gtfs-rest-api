@@ -168,6 +168,8 @@ class StopTimeTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'trip_id',
+        'stop_id'
     ];
 
     const AUTOINC_COLUMN = null;

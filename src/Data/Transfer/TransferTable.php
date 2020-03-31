@@ -90,6 +90,9 @@ class TransferTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'from_stop_id',
+        'to_stop_id',
+        'transfer_type'
     ];
 
     const AUTOINC_COLUMN = null;

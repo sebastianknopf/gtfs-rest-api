@@ -26,8 +26,20 @@ class RouteController extends BaseController
      * @return mixed Array with all routes
      */
     protected function findAll(ServerRequest $request) {
-        $result = $this->orm->select(Route::class)->fetchRecords();
-        return $result;
+        $requestOffset = $request->getParam('offset', 0);
+
+        $query = $this->orm
+            ->select(Route::class)
+            ->with([
+                'agency'
+            ])
+            ->limit(500);
+
+        if ($requestOffset > 0) {
+            $query->offset($requestOffset);
+        }
+
+        return $query->fetchRecords();
     }
 
 }

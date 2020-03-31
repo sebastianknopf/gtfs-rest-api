@@ -77,6 +77,7 @@ class LevelTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'level_id'
     ];
 
     const AUTOINC_COLUMN = null;

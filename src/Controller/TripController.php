@@ -26,8 +26,22 @@ class TripController extends BaseController
      * @return mixed Array with all trips
      */
     protected function findAll(ServerRequest $request) {
-        $result = $this->orm->select(Trip::class)->fetchRecords();
-        return $result;
+        $requestOffset = $request->getParam('offset', 0);
+
+        $query = $this->orm
+            ->select(Trip::class)
+            ->with([
+                'route' => [
+                    'agency'
+                ]
+            ])
+            ->limit(500);
+
+        if ($requestOffset > 0) {
+            $query->offset($requestOffset);
+        }
+
+        return $query->fetchRecords();
     }
 
 }

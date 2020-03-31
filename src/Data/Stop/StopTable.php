@@ -37,7 +37,7 @@ class StopTable extends Table
   'notnull' => false,
   'default' => NULL,
   'autoinc' => false,
-  'primary' => false,
+  'primary' => true,
   'options' => NULL,
 ),
         'stop_code' => array (
@@ -220,6 +220,7 @@ class StopTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'stop_id'
     ];
 
     const AUTOINC_COLUMN = null;

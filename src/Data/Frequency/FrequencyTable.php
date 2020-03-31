@@ -103,6 +103,8 @@ class FrequencyTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'trip_id',
+        'start_time'
     ];
 
     const AUTOINC_COLUMN = null;

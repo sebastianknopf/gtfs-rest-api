@@ -168,6 +168,7 @@ class RouteTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'route_id'
     ];
 
     const AUTOINC_COLUMN = null;

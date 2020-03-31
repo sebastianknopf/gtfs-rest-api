@@ -142,6 +142,7 @@ class AgencyTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'agency_id'
     ];
 
     const AUTOINC_COLUMN = null;

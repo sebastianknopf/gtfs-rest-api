@@ -168,6 +168,7 @@ class CalendarTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'service_id'
     ];
 
     const AUTOINC_COLUMN = null;

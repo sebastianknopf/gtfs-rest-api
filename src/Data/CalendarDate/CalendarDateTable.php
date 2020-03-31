@@ -77,6 +77,8 @@ class CalendarDateTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'service_id',
+        'date'
     ];
 
     const AUTOINC_COLUMN = null;

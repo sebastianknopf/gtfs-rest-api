@@ -168,6 +168,7 @@ class TripTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'trip_id'
     ];
 
     const AUTOINC_COLUMN = null;
