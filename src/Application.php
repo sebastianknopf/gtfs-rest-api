@@ -6,10 +6,17 @@
  * @license http://opensource.org/licenses/MIT MIT
  */
 
+use App\Common\QueryLogger;
 use Atlas\Orm\Atlas;
 use DI\Container;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
+
+if (APP_DEBUG) {
+    error_reporting(E_ALL);
+} else {
+    error_reporting(0);
+}
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -22,6 +29,12 @@ $container->set('orm', function () use ($container) {
     }
 
     $orm = Atlas::new('sqlite:' . $databaseName);
+
+    if (APP_DEBUG) {
+        $orm->setQueryLogger(new QueryLogger());
+        $orm->logQueries();
+    }
+
     return $orm;
 });
 

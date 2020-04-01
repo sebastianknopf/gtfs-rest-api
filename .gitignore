@@ -8,5 +8,6 @@ modules.xml
 *.ipr
 
 ### Project ###
+/logs/*
 /data/AVG-VBK-SWBAD_j20.db3
 
