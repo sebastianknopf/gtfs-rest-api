@@ -10,9 +10,10 @@ namespace App\Controller;
 
 use App\Data\Calendar\Calendar;
 use App\Data\CalendarDate\CalendarDate;
-use App\Data\Stop\StopTable;
+use App\Data\Stop\Stop;
 use App\Data\StopTime\StopTimeTable;
 use App\Data\Trip\Trip;
+use App\Data\Trip\TripRecord;
 use Slim\Http\ServerRequest;
 
 /**
@@ -114,18 +115,22 @@ class TripController extends BaseController
             ]);
         }
 
+        $resultTrips = [];
         if ($requestTime != null) {
-            $resultTrips = [];
             foreach($query->fetchRecordSet() as $tripRecord) {
                 if (strtotime($requestTime) <= strtotime($tripRecord->stop_times[0]->departure_time)) {
                     $resultTrips[] = $tripRecord;
                 }
             }
-
-            return $resultTrips;
         } else {
-            return $query->fetchRecords();
+            $resultTrips = $query->fetchRecords();
         }
+
+        usort($resultTrips, function ($a, $b) {
+            return strtotime($a->stop_times[0]->departure_time) > strtotime($b->stop_times[0]->departure_time);
+        });
+
+        return $resultTrips;
     }
 
     /**
@@ -164,18 +169,22 @@ class TripController extends BaseController
             ]);
         }
 
+        $resultTrips = [];
         if ($requestTime != null) {
-            $resultTrips = [];
             foreach($query->fetchRecordSet() as $tripRecord) {
                 if (strtotime($requestTime) <= strtotime($tripRecord->stop_times[0]->departure_time)) {
                     $resultTrips[] = $tripRecord;
                 }
             }
-
-            return $resultTrips;
         } else {
-            return $query->fetchRecords();
+            $resultTrips = $query->fetchRecords();
         }
+
+        usort($resultTrips, function ($a, $b) {
+            return strtotime($a->stop_times[0]->departure_time) > strtotime($b->stop_times[0]->departure_time);
+        });
+
+        return $resultTrips;
     }
 
     /**
@@ -194,8 +203,9 @@ class TripController extends BaseController
             throw new \RuntimeException('missing parameter stopId!');
         }
 
-        $query = $this->orm->select(Trip::class);
+        $subordinateStopIds = $this->getSubordinateStopIds($requestStopId);
 
+        $query = $this->orm->select(Trip::class);
         $query->with([
            'route' => [
                'agency'
@@ -203,24 +213,14 @@ class TripController extends BaseController
            'stop_times' => [
                'stop'
            ]
-        ]);
-
-        $query->where(
+        ])->where(
             'trip_id IN ',
             $query->subSelect()
                 ->columns('trip_id')
                 ->from(StopTimeTable::NAME)
-                ->where(
-                    'stop_id IN ',
-                    $query->subSelect()
-                        ->columns('stop_id')
-                        ->from(StopTable::NAME)
-                        ->where('parent_station = ', $requestStopId)
-                        ->union()
-                        ->columns('stop_id')
-                        ->from(StopTable::NAME)
-                        ->where('stop_id = ', $requestStopId)
-                )
+                ->whereEquals([
+                    'stop_id' => $subordinateStopIds
+                ])
 
         )
         ->limit($this->requestLimit)
@@ -232,18 +232,25 @@ class TripController extends BaseController
             ]);
         }
 
+        $resultTrips = [];
         if ($requestTime != null) {
-            $resultTrips = [];
             foreach($query->fetchRecordSet() as $tripRecord) {
                 if (strtotime($requestTime) <= strtotime($tripRecord->stop_times[0]->departure_time)) {
                     $resultTrips[] = $tripRecord;
                 }
             }
-
-            return $resultTrips;
         } else {
-            return $query->fetchRecords();
+            $resultTrips = $query->fetchRecords();
         }
+
+        usort($resultTrips, function ($a, $b) use ($subordinateStopIds) {
+            $stopTimeIndexA = $this->getStopTimeIndex($a, $subordinateStopIds);
+            $stopTimeIndexB = $this->getStopTimeIndex($b, $subordinateStopIds);
+
+            return strtotime($a->stop_times[$stopTimeIndexA]->departure_time) > strtotime($b->stop_times[$stopTimeIndexB]->departure_time);
+        });
+
+        return $resultTrips;
     }
 
     /**
@@ -283,6 +290,45 @@ class TripController extends BaseController
         }
 
         return array_values($baseServiceIds);
+    }
+
+    /**
+     * Returns all subordinate stop IDs for a desired stop ID.
+     *
+     * @param $stopId The reference stop ID
+     * @return array  All subordinate stop IDs
+     */
+    private function getSubordinateStopIds($stopId) {
+        $query = $this->orm
+            ->select(Stop::class)
+            ->columns('stop_id')
+            ->where('parent_station = ', $stopId)
+            ->orWhere('stop_id = ', $stopId);
+
+        $resultStopIds = [];
+        foreach ($query->fetchRecordSet() as $stopRecord) {
+            $resultStopIds[] = $stopRecord->stop_id;
+        }
+
+        return $resultStopIds;
+    }
+
+    /**
+     * Returns the first index of a stop time that appears in the stop times
+     * of the desired trip record.
+     *
+     * @param TripRecord $tripRecord The trip to search
+     * @param array $stopIds Stop IDs to lookup
+     * @return int The result stop time index
+     */
+    private function getStopTimeIndex(TripRecord $tripRecord, array $stopIds) {
+        for ($i = 0; $i < count($tripRecord->stop_times); $i++) {
+            if (in_array($tripRecord->stop_times[$i]->stop_id, $stopIds)) {
+                return $i;
+            }
+        }
+
+        return 0;
     }
 
 }
