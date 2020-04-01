@@ -37,7 +37,7 @@ class TripRelationships extends MapperRelationships
             'trip_id' => 'trip_id'
         ]);
 
-        $this->manyToOne('shape', Shape::class, [
+        $this->oneToMany('shape', Shape::class, [
             'shape_id' => 'shape_id'
         ]);
 

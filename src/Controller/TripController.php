@@ -65,9 +65,9 @@ class TripController extends BaseController
                 'route' => [
                     'agency'
                 ],
-                'stop_times' => [
-                    'stop'
-                ],
+                'stop_times' => function ($select) {
+                    $select->with(['stop'])->orderBy('stop_sequence');
+                },
                 'calendar' => [
                     'calendar_dates'
                 ],
@@ -101,9 +101,9 @@ class TripController extends BaseController
                 'route' => [
                     'agency'
                 ],
-                'stop_times' => [
-                    'stop'
-                ]
+                'stop_times' =>  function ($select) {
+                    $select->with(['stop'])->orderBy('stop_sequence');
+                }
             ])
             ->where('route_id = ', $requestRouteId)
             ->limit($this->requestLimit)
@@ -155,9 +155,9 @@ class TripController extends BaseController
                 'route' => [
                     'agency'
                 ],
-                'stop_times' => [
-                    'stop'
-                ]
+                'stop_times' =>  function ($select) {
+                    $select->with(['stop'])->orderBy('stop_sequence');
+                }
             ])
             ->where('block_id = ', $requestBlockId)
             ->limit($this->requestLimit)
@@ -210,9 +210,9 @@ class TripController extends BaseController
            'route' => [
                'agency'
            ],
-           'stop_times' => [
-               'stop'
-           ]
+           'stop_times' => function ($select) {
+                $select->with(['stop'])->orderBy('stop_sequence');
+            }
         ])->where(
             'trip_id IN ',
             $query->subSelect()

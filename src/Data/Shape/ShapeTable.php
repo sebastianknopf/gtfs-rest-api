@@ -103,6 +103,8 @@ class ShapeTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'shape_id',
+        'shape_pt_sequence'
     ];
 
     const AUTOINC_COLUMN = null;
