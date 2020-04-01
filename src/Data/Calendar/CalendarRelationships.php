@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace App\Data\Calendar;
 
+use App\Data\CalendarDate\CalendarDate;
 use App\Data\Trip\Trip;
 use Atlas\Mapper\MapperRelationships;
 
@@ -21,7 +22,7 @@ class CalendarRelationships extends MapperRelationships
             'service_id' => 'service_id'
         ]);
 
-        $this->oneToMany('calendar_dates', Calendar::class, [
+        $this->oneToMany('calendar_dates', CalendarDate::class, [
             'service_id' => 'service_id'
         ]);
     }

@@ -10,7 +10,6 @@ declare(strict_types=1);
 
 namespace App\Data\Trip;
 
-use App\Data\Attribution\Attribution;
 use App\Data\Calendar\Calendar;
 use App\Data\Frequency\Frequency;
 use App\Data\Route\Route;
@@ -42,8 +41,8 @@ class TripRelationships extends MapperRelationships
             'shape_id' => 'shape_id'
         ]);
 
-        $this->oneToMany('attributions', Attribution::class, [
-            'trip_id' => 'trip_id'
-        ])->where('trip_id IS NOT NULL');
+        $this->manyToOne('calendar', Calendar::class, [
+            'service_id' => 'service_id'
+        ]);
     }
 }

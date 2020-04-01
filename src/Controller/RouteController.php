@@ -26,17 +26,72 @@ class RouteController extends BaseController
      * @return mixed Array with all routes
      */
     protected function findAll(ServerRequest $request) {
-        $requestOffset = $request->getParam('offset', 0);
+        $query = $this->orm
+            ->select(Route::class)
+            ->with([
+                'agency'
+            ])
+            ->limit($this->requestLimit)
+            ->offset($this->requestOffset);
+
+        return $query->fetchRecords();
+    }
+
+    /**
+     * Selects a single route by its routeId.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return mixed Array with matching route object(s)
+     */
+    protected function findByRouteId(ServerRequest $request) {
+        $requestRouteId = $request->getParam('routeId', null);
+
+        if ($requestRouteId == null) {
+            throw new \RuntimeException('missing parameter routeId!');
+        }
 
         $query = $this->orm
             ->select(Route::class)
             ->with([
                 'agency'
             ])
-            ->limit(500);
+            ->where('route_id = ', $requestRouteId);
 
-        if ($requestOffset > 0) {
-            $query->offset($requestOffset);
+        return [$query->fetchRecord()];
+    }
+
+    /**
+     * Selects routes by their routeShortName or routeLongName.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return mixed Array with matching route object(s)
+     */
+    protected function findByRouteName(ServerRequest $request) {
+        $requestRouteName = $request->getParam('routeName', null);
+
+        if ($requestRouteName == null) {
+            throw new \RuntimeException('missing parameter routeName!');
+        }
+
+        $query = $this->orm
+            ->select(Route::class)
+            ->with([
+                'agency'
+            ])
+            ->limit($this->requestLimit)
+            ->offset($this->requestOffset);
+
+        // need cascading try/catch blocks here, because route_short_name and route_long_name are conditionally required.
+        // thus one of these fields might be missing and fire an exception during the query.
+        try {
+            $query->where('route_short_name LIKE ', '%' . $requestRouteName . '%')
+                ->orWhere('route_long_name LIKE ', '%' . $requestRouteName . '%');
+        } catch(\Exception $eb) {
+            try {
+                $query->where('route_short_name LIKE ', '%' . $requestRouteName . '%');
+            } catch(\Exception $es) {
+                $query->where('route_long_name LIKE ', '%' . $requestRouteName . '%');
+            }
         }
 
         return $query->fetchRecords();

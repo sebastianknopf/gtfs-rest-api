@@ -30,6 +30,16 @@ abstract class BaseController {
     protected $orm;
 
     /**
+     * @var integer The default limit for database queries
+     */
+    protected $requestLimit;
+
+    /**
+     * @var integer The default offset for database queries
+     */
+    protected $requestOffset;
+
+    /**
      * Constructor method.
      *
      * @param Container $container The applications dependency container
@@ -51,6 +61,9 @@ abstract class BaseController {
     public function __invoke(ServerRequest $request, Response $response, $args) {
         $selector = isset($args['selector']) ? $args['selector'] : self::$DEFAULT_SELECTOR;
         $selectorMethod = 'find' . $selector;
+
+        $this->requestLimit = $request->getParam('limit', 100);
+        $this->requestOffset = $request->getParam('offset', 0);
 
         if (method_exists($this, $selectorMethod)) {
             $result = $this->jsonResponse($this->$selectorMethod($request));
