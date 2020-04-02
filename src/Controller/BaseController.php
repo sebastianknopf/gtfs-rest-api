@@ -85,7 +85,9 @@ abstract class BaseController {
         $resultType = $this->getResultType();
 
         return [
-            $resultType => $result
+            'response' => [
+                $resultType => $result
+            ]
         ];
     }
 

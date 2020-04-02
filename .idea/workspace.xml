@@ -2,62 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/skeleton.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/ControllerDispatcher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GTFS.db3" beforeDir="false" afterPath="$PROJECT_DIR$/data/GTFS.db3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Agency/AgencyFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Agency/AgencyRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Agency/AgencyTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Attribution/AttributionFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Attribution/AttributionRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Attribution/AttributionTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Calendar/CalendarFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Calendar/CalendarRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Calendar/CalendarTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FareRule/FareRuleFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FareRule/FareRuleRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FareRule/FareRuleTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Frequency/FrequencyFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Frequency/FrequencyRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Frequency/FrequencyTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Level/LevelFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Level/LevelRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Level/LevelTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Pathway/PathwayFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Pathway/PathwayRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Pathway/PathwayTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Route/RouteFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Route/RouteRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Route/RouteTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Shape/ShapeFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Shape/ShapeRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Shape/ShapeTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Stop/StopFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Stop/StopRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Stop/StopTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/StopTime/StopTimeFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/StopTime/StopTimeTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Transfer/TransferFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Transfer/TransferRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Transfer/TransferTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Translation/TranslationFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Translation/TranslationRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Translation/TranslationTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Trip/TripFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Trip/TripRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Trip/TripTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,38 +39,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/skeleton.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Application.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-              <folding>
-                <element signature="e#160#187#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -149,9 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/src/Action/StopsAction.php" />
-        <option value="$PROJECT_DIR$/src/Action/RouteAction.php" />
         <option value="$PROJECT_DIR$/src/Action/TripsAction.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
@@ -176,8 +90,6 @@
         <option value="$PROJECT_DIR$/src/Data/Agency/AgencyRelationships.php" />
         <option value="$PROJECT_DIR$/src/Data/Route/RouteRelationships.php" />
         <option value="$PROJECT_DIR$/src/Controller/RouteController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/StopController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Data/StopTime/StopTimeRow.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/logs/queries.log" />
@@ -199,7 +111,12 @@
         <option value="$PROJECT_DIR$/src/Data/FareRule/FareRuleTable.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/config/skeleton.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ResourceController.php" />
+        <option value="$PROJECT_DIR$/src/Common/ResourceController.php" />
         <option value="$PROJECT_DIR$/src/Application.php" />
+        <option value="$PROJECT_DIR$/src/Common/ResourceDispatcher.php" />
+        <option value="$PROJECT_DIR$/src/Controller/StopController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
       </list>
     </option>
   </component>
@@ -256,12 +173,19 @@
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -281,6 +205,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\XAMPP\htdocs\gtfs-rest-api\src\Common" />
       <recent name="C:\XAMPP\htdocs\gtfs-rest-api\src" />
       <recent name="C:\XAMPP\htdocs\gtfs-rest-api" />
     </key>
@@ -312,7 +237,7 @@
       <workItem from="1585568068982" duration="6309000" />
       <workItem from="1585634180608" duration="35254000" />
       <workItem from="1585719434328" duration="19103000" />
-      <workItem from="1585806826909" duration="4115000" />
+      <workItem from="1585806826909" duration="7971000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1585647756764</created>
@@ -377,11 +302,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585770163459</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="re-generated model files for type safety and added config file">
+      <created>1585819052358</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819052358</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70735000" />
+    <option name="totallyTimeSpent" value="74591000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,7 +326,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -409,8 +340,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978678" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021322" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733475" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -431,20 +362,11 @@
     <MESSAGE value="improved trip/byStopId selector and trip sort by departure time" />
     <MESSAGE value="added query logger for debug mode" />
     <MESSAGE value="improved ordering of stop times and shapes loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved ordering of stop times and shapes loading" />
+    <MESSAGE value="re-generated model files for type safety and added config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-generated model files for type safety and added config file" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="e#212#237#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data/Attribution/AttributionRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -504,16 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/StopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
-          <folding>
-            <element signature="e#187#210#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data/StopTime/StopTimeRow.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -548,16 +460,6 @@
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/queries.log">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Common/QueryLogger.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -661,13 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -779,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/skeleton.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -793,13 +681,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/queries.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32767" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/StopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="63" column="50" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+          <folding>
+            <element signature="e#187#210#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1166">
+          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/ControllerDispatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding>
+            <element signature="e#187#204#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        <state relative-caret-position="952">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding>
             <element signature="e#160#187#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>

@@ -6,6 +6,7 @@
  * @license http://opensource.org/licenses/MIT MIT
  */
 
+use App\Common\ControllerDispatcher;
 use App\Common\QueryLogger;
 use Atlas\Orm\Atlas;
 use DI\Container;
@@ -58,20 +59,7 @@ $app->addErrorMiddleware(
 
 // add endpoint routes
 $app->group('/api/v1', function (RouteCollectorProxy $group) {
-    // stops
-    $group->group('/stops', function (RouteCollectorProxy $stopsGroup) {
-       $stopsGroup->get('/[{selector}]', \App\Controller\StopController::class);
-    });
-
-    // routes
-    $group->group('/routes', function (RouteCollectorProxy $stopsGroup) {
-       $stopsGroup->get('/[{selector}]', \App\Controller\RouteController::class);
-    });
-
-    // trips
-    $group->group('/trips', function (RouteCollectorProxy $stopsGroup) {
-       $stopsGroup->get('/[{selector}]', \App\Controller\TripController::class);
-    });
+    $group->get('/{resource}/[{selector}]', ControllerDispatcher::class);
 });
 
 // run application
