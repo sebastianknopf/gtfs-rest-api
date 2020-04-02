@@ -18,12 +18,15 @@ if (APP_DEBUG) {
     error_reporting(0);
 }
 
-require __DIR__ . '/../vendor/autoload.php';
+require dirname(__FILE__) . '/../vendor/autoload.php';
+
+// read configure file
+$config = include(dirname(__FILE__) . '/../config/config.php');
 
 // build dependency container
 $container = new Container();
-$container->set('orm', function () use ($container) {
-    $databaseName = dirname(__FILE__) . '/../data/' . APP_DATABASE . '.db3';
+$container->set('orm', function () use ($container, $config) {
+    $databaseName = $config['config']['orm']['database'];
     if (!file_exists($databaseName)) {
         exit('could not find database!');
     }
