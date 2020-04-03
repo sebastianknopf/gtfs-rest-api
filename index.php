@@ -6,5 +6,5 @@
  * @license http://opensource.org/licenses/MIT MIT
  */
 
-require __DIR__ . '/config.php';            // load config constants
-require __DIR__ . '/src/Application.php';   // run application
+require __DIR__ . '/config/constants.php.php';  // load config constants
+require __DIR__ . '/src/Application.php';       // run application
