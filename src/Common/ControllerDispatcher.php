@@ -12,15 +12,36 @@ use DI\Container;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 
+/**
+ * Controller dispatcher class - Dispatches a resource (found in the route) to its corresponding controller.
+ *
+ * @package App\Common
+ */
 class ControllerDispatcher
 {
 
+    /**
+     * @var Container The applications dependency container
+     */
     private $container;
 
+    /**
+     * Constructor method.
+     *
+     * @param Container $container
+     */
     public function __construct(Container $container) {
         $this->container = $container;
     }
 
+    /**
+     * Invoke method - Called by the applications router.
+     *
+     * @param ServerRequest $request The server request instance
+     * @param Response $response The response instance
+     * @param $args The route arguments
+     * @return Response The final response
+     */
     public function __invoke(ServerRequest $request, Response $response, $args) {
         $requestResource = isset($args['resource']) ? $args['resource'] : null;
 
@@ -38,6 +59,12 @@ class ControllerDispatcher
         }
     }
 
+    /**
+     * Returns the controller name to a specific resource name.
+     *
+     * @param string $resource The resource name
+     * @return string Valid controller class name
+     */
     private function getResourceControllerName($resource) {
         $resource = ucfirst($resource);
         $resource = 'App\\Controller\\' . $resource;
