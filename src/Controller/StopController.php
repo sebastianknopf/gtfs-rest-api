@@ -59,7 +59,15 @@ class StopController extends BaseController
             ->select(Stop::class)
             ->with([
                 'level',
-                'transfers'
+                'transfers',
+                'pathways',
+                'subordinate_stops' => function ($select) {
+                    $select->with([
+                        'level',
+                        'transfers',
+                        'pathways'
+                    ]);
+                }
             ])
             ->where('stop_id = ', $requestStopId);
 
@@ -123,7 +131,15 @@ class StopController extends BaseController
             ->select(Stop::class)
             ->with([
                 'level',
-                'transfers'
+                'transfers',
+                'pathways',
+                'subordinate_stops' => function ($select) {
+                    $select->with([
+                        'level',
+                        'transfers',
+                        'pathways'
+                    ]);
+                }
             ])
             ->where('stop_name LIKE ', '%' . $requestStopName . '%')
             ->andWhere('location_type = ', '1')
