@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Stop/StopRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,14 +38,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/StopController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1173">
               <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
-              <folding>
-                <element signature="e#187#210#0#PHP" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -120,7 +125,6 @@
         <option value="$PROJECT_DIR$/src/Common/ResourceController.php" />
         <option value="$PROJECT_DIR$/src/Application.php" />
         <option value="$PROJECT_DIR$/src/Common/ResourceDispatcher.php" />
-        <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRelationships.php" />
         <option value="$PROJECT_DIR$/src/Common/ControllerDispatcher.php" />
         <option value="$PROJECT_DIR$/src/Controller/FareController.php" />
@@ -129,8 +133,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Data/Stop/StopRelationships.php" />
-        <option value="$PROJECT_DIR$/src/Controller/StopController.php" />
         <option value="$PROJECT_DIR$/config/constants.php" />
+        <option value="$PROJECT_DIR$/src/Controller/StopController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
       </list>
     </option>
   </component>
@@ -205,12 +210,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -266,7 +265,7 @@
       <workItem from="1585890711922" duration="2708000" />
       <workItem from="1585894207907" duration="3993000" />
       <workItem from="1585929805333" duration="1205000" />
-      <workItem from="1586067499302" duration="1437000" />
+      <workItem from="1586067499302" duration="1465000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1585647756764</created>
@@ -380,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586067718247</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="several bugfixes in stop controller">
+      <created>1586074106909</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1586074106910</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87719000" />
+    <option name="totallyTimeSpent" value="87747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,7 +447,8 @@
     <MESSAGE value="idea fix commit" />
     <MESSAGE value="added documentation and license" />
     <MESSAGE value="adapted composer.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="adapted composer.json" />
+    <MESSAGE value="several bugfixes in stop controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="several bugfixes in stop controller" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -692,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -804,9 +804,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
-          <folding>
-            <element signature="e#187#210#0#PHP" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
         </state>
       </provider>
     </entry>
