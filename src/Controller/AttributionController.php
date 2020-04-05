@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-use App\Data\Attribution\Attribution;
+use App\Google\Transit\Attribution\Attribution;
 use Slim\Http\ServerRequest;
 
 /**

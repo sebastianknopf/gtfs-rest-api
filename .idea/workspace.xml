@@ -2,15 +2,200 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Mapper/NullableMapperRelationships.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mapper/Relationship/NullableManyToOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToMany.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToOne.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Route/RouteRelationships.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Stop/StopRelationships.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRelationships.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Trip/TripRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AttributionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AttributionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FareController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RouteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/StopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TripController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TripController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/Agency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/Agency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencySelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencySelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Agency/AgencyTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/Attribution.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/Attribution.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Attribution/AttributionTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Attribution/AttributionTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/Calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Calendar/CalendarTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FareRule/FareRuleTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/FeedInfo/FeedInfoTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/FeedInfo/FeedInfoTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/Frequency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/Frequency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencySelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencySelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Frequency/FrequencyTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/Level.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/Level.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Level/LevelTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Level/LevelTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/Pathway.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/Pathway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwaySelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwaySelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Pathway/PathwayTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Route/RouteTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/Shape.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/Shape.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Shape/ShapeTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Shape/ShapeTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/Stop.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/Stop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Stop/StopTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Stop/StopTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/StopTime/StopTimeTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/Transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/Transfer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Transfer/TransferTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Transfer/TransferTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/Translation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/Translation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Translation/TranslationTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Translation/TranslationTableSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/Trip.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/Trip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripFields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripRecordSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripRelationships.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripRow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripTableEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Trip/TripTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Trip/TripTableSelect.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +230,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Mapper/NullableMapperRelationships.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#184#230#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -71,14 +262,18 @@
       <find>setOrGe</find>
       <find>subordinate_stops</find>
       <find>manyToOne</find>
+      <find>App\Data</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>child_stops</replace>
+      <replace>Google\Transit</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\XAMPP\htdocs\gtfs-rest-api\vendor\atlas\mapper</dir>
       <dir>C:\XAMPP\htdocs\gtfs-rest-api\vendor\atlas\</dir>
+      <dir>C:\XAMPP\htdocs\gtfs-rest-api\src\Google\Transit</dir>
+      <dir>C:\XAMPP\htdocs\gtfs-rest-api\src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -110,7 +305,6 @@
         <option value="$PROJECT_DIR$/src/Data/Transfer/TransferTable.php" />
         <option value="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTable.php" />
         <option value="$PROJECT_DIR$/src/Data/FareRule/FareRuleTable.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/config/skeleton.php" />
         <option value="$PROJECT_DIR$/src/Controller/ResourceController.php" />
         <option value="$PROJECT_DIR$/src/Common/ResourceController.php" />
@@ -122,7 +316,6 @@
         <option value="$PROJECT_DIR$/src/Controller/AttributionController.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/constants.php" />
         <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Data/Stop/StopRow.php" />
@@ -138,6 +331,8 @@
         <option value="$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToOne.php" />
         <option value="$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToMany.php" />
         <option value="$PROJECT_DIR$/src/Mapper/NullableMapperRelationships.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -210,26 +405,14 @@
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="Relationship" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
+              <item name="Transit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,6 +432,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\XAMPP\htdocs\gtfs-rest-api\src\Google\Transit" />
       <recent name="C:\XAMPP\htdocs\gtfs-rest-api\config" />
       <recent name="C:\XAMPP\htdocs\gtfs-rest-api\src\Common" />
       <recent name="C:\XAMPP\htdocs\gtfs-rest-api\src" />
@@ -286,7 +470,7 @@
       <workItem from="1585890711922" duration="2708000" />
       <workItem from="1585894207907" duration="3993000" />
       <workItem from="1585929805333" duration="1205000" />
-      <workItem from="1586067499302" duration="7780000" />
+      <workItem from="1586067499302" duration="8232000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1585647756764</created>
@@ -414,11 +598,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586074157543</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated related objects to be null by default">
+      <created>1586108343960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586108343960</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94062000" />
+    <option name="totallyTimeSpent" value="94514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,7 +628,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -477,123 +668,124 @@
     <MESSAGE value="adapted composer.json" />
     <MESSAGE value="several bugfixes in stop controller" />
     <MESSAGE value="response parameter name 'response' =&gt; 'result'" />
-    <option name="LAST_COMMIT_MESSAGE" value="response parameter name 'response' =&gt; 'result'" />
+    <MESSAGE value="updated related objects to be null by default" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated related objects to be null by default" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Data/Translation/TranslationTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Translation/TranslationTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2125">
           <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Trip/TripTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Trip/TripTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopEvents.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopEvents.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopSelect.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopSelect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/CalendarDate/CalendarDateTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
           <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Transfer/TransferTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Transfer/TransferTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
           <caret line="94" column="22" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/StopTime/StopTimeTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
           <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Shape/ShapeTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Shape/ShapeTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Route/RouteTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Route/RouteTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Pathway/PathwayTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
           <caret line="136" column="18" selection-start-line="136" selection-start-column="18" selection-end-line="136" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/FareRule/FareRuleTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/FareRule/FareRuleTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
           <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Transfer/TransferRow.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Transfer/TransferRow.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="29" column="35" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Transfer/TransferRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Transfer/TransferRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Agency/AgencyTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Agency/AgencyTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Frequency/FrequencyTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Frequency/FrequencyTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Level/LevelTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Level/LevelTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-58">
           <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
@@ -620,7 +812,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
@@ -675,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -700,13 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -714,49 +892,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Calendar/CalendarRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Calendar/CalendarRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopTableEvents.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopTableEvents.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopTableSelect.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopTableSelect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopRow.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopRow.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopFields.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopFields.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/Stop.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/Stop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopRecord.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopRecord.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
@@ -770,7 +948,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopTable.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="205" column="27" selection-start-line="205" selection-start-column="27" selection-end-line="205" selection-end-column="27" />
@@ -784,14 +962,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stop/StopRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Route/RouteRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Route/RouteRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
@@ -801,14 +979,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/StopTime/StopTimeRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Trip/TripRelationships.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Trip/TripRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
@@ -846,6 +1024,20 @@
           <folding>
             <element signature="e#184#230#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
         </state>
       </provider>
     </entry>

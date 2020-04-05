@@ -13,8 +13,8 @@ return [
                 'sqlite:' . dirname(__FILE__) . '/../data/' . APP_DATABASE . '.db3'
             ],
             'database' => dirname(__FILE__) . '/../data/' . APP_DATABASE . '.db3',
-            'namespace' => 'App\\Data\\',
-            'directory' => dirname(__FILE__) . '/../src/Data'
+            'namespace' => 'Google\\Transit\\',
+            'directory' => dirname(__FILE__) . '/../src/Google/Transit'
         ]
     ]
 ];

@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-use App\Data\Route\Route;
+use App\Google\Transit\Route\Route;
 use Slim\Http\ServerRequest;
 
 /**

@@ -8,12 +8,12 @@
 
 namespace App\Controller;
 
-use App\Data\Calendar\Calendar;
-use App\Data\CalendarDate\CalendarDate;
-use App\Data\Stop\Stop;
-use App\Data\StopTime\StopTimeTable;
-use App\Data\Trip\Trip;
-use App\Data\Trip\TripRecord;
+use App\Google\Transit\Calendar\Calendar;
+use App\Google\Transit\CalendarDate\CalendarDate;
+use App\Google\Transit\Stop\Stop;
+use App\Google\Transit\StopTime\StopTimeTable;
+use App\Google\Transit\Trip\Trip;
+use App\Google\Transit\Trip\TripRecord;
 use Slim\Http\ServerRequest;
 
 /**

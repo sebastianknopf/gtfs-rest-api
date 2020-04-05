@@ -8,8 +8,8 @@
 
 namespace App\Controller;
 
-use App\Data\FareAttribute\FareAttribute;
-use App\Data\FareRule\FareRuleTable;
+use App\Google\Transit\FareAttribute\FareAttribute;
+use App\Google\Transit\FareRule\FareRuleTable;
 use Slim\Http\ServerRequest;
 
 /**

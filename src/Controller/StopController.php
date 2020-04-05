@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-use App\Data\Stop\Stop;
+use App\Google\Transit\Stop\Stop;
 use Slim\Http\ServerRequest;
 
 /**
