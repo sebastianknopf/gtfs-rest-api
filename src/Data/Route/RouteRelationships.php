@@ -11,13 +11,13 @@ declare(strict_types=1);
 namespace App\Data\Route;
 
 use App\Data\Agency\Agency;
-use Atlas\Mapper\MapperRelationships;
+use App\Mapper\NullableMapperRelationships;
 
-class RouteRelationships extends MapperRelationships
+class RouteRelationships extends NullableMapperRelationships
 {
     protected function define()
     {
-        $this->manyToOne('agency', Agency::class, [
+        $this->nullableManyToOne('agency', Agency::class, [
             'agency_id' => 'agency_id'
         ]);
     }

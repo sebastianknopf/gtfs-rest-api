@@ -11,18 +11,13 @@ declare(strict_types=1);
 namespace App\Data\StopTime;
 
 use App\Data\Stop\Stop;
-use App\Data\Trip\Trip;
-use Atlas\Mapper\MapperRelationships;
+use App\Mapper\NullableMapperRelationships;
 
-class StopTimeRelationships extends MapperRelationships
+class StopTimeRelationships extends NullableMapperRelationships
 {
     protected function define()
     {
-        $this->manyToOne('trip', Trip::class, [
-            'trip_id' => 'trip_id'
-        ]);
-
-        $this->manyToOne('stop', Stop::class, [
+        $this->nullableManyToOne('stop', Stop::class, [
             'stop_id' => 'stop_id'
         ]);
     }

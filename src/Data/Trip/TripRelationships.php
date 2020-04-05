@@ -15,17 +15,21 @@ use App\Data\Frequency\Frequency;
 use App\Data\Route\Route;
 use App\Data\Shape\Shape;
 use App\Data\StopTime\StopTime;
-use Atlas\Mapper\MapperRelationships;
+use App\Mapper\NullableMapperRelationships;
 
-class TripRelationships extends MapperRelationships
+class TripRelationships extends NullableMapperRelationships
 {
     protected function define()
     {
-        $this->manyToOne('route', Route::class, [
+        $this->nullableManyToOne('route', Route::class, [
             'route_id' => 'route_id'
         ]);
 
-        $this->manyToOne('service', Calendar::class, [
+        $this->nullableManyToOne('service', Calendar::class, [
+            'service_id' => 'service_id'
+        ]);
+
+        $this->nullableManyToOne('calendar', Calendar::class, [
             'service_id' => 'service_id'
         ]);
 
@@ -37,12 +41,8 @@ class TripRelationships extends MapperRelationships
             'trip_id' => 'trip_id'
         ]);
 
-        $this->oneToMany('shape', Shape::class, [
+        $this->oneToMany('shape_points', Shape::class, [
             'shape_id' => 'shape_id'
-        ]);
-
-        $this->manyToOne('calendar', Calendar::class, [
-            'service_id' => 'service_id'
         ]);
     }
 }

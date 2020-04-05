@@ -13,13 +13,13 @@ namespace App\Data\Stop;
 use App\Data\Level\Level;
 use App\Data\Pathway\Pathway;
 use App\Data\Transfer\Transfer;
-use Atlas\Mapper\MapperRelationships;
+use App\Mapper\NullableMapperRelationships;
 
-class StopRelationships extends MapperRelationships
+class StopRelationships extends NullableMapperRelationships
 {
     protected function define()
     {
-        $this->manyToOne('level', Level::class, [
+        $this->nullableManyToOne('level', Level::class, [
             'level_id' => 'level_id'
         ]);
 
