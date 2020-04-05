@@ -31,7 +31,7 @@ class StopRelationships extends MapperRelationships
             'stop_id' => 'from_stop_id'
         ]);
 
-        $this->oneToMany('subordinate_stops', Stop::class, [
+        $this->oneToMany('child_stops', Stop::class, [
             'stop_id' => 'parent_station'
         ])->where('parent_station IS NOT NULL');
     }

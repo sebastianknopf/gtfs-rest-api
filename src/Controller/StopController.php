@@ -33,7 +33,8 @@ class StopController extends BaseController
             ->with([
                 'level'
             ])
-            ->limit(500);
+            ->limit($this->requestLimit)
+            ->offset($this->requestOffset);
 
         if ($requestOffset > 0) {
             $query->offset($requestOffset);
@@ -61,7 +62,7 @@ class StopController extends BaseController
                 'level',
                 'transfers',
                 'pathways',
-                'subordinate_stops' => function ($select) {
+                'child_stops' => function ($select) {
                     $select->with([
                         'level',
                         'transfers',
@@ -69,7 +70,9 @@ class StopController extends BaseController
                     ]);
                 }
             ])
-            ->where('stop_id = ', $requestStopId);
+            ->where('stop_id = ', $requestStopId)
+            ->limit($this->requestLimit)
+            ->offset($this->requestOffset);
 
         return [$query->fetchRecord()];
     }
@@ -133,7 +136,7 @@ class StopController extends BaseController
                 'level',
                 'transfers',
                 'pathways',
-                'subordinate_stops' => function ($select) {
+                'child_stops' => function ($select) {
                     $select->with([
                         'level',
                         'transfers',
