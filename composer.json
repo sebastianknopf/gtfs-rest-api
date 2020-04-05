@@ -1,4 +1,14 @@
 {
+    "name": "gtfs/rest-api",
+    "description": "A simple REST API for GTFS based on Slim Framework and Atlas.ORM",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Knopf",
+            "email": "mail@sebastian-knopf.de"
+        }
+    ],
     "require": {
         "slim/slim": "4.0",
         "slim/psr7": "^1.0",
@@ -6,12 +16,12 @@
         "php-di/php-di": "^6.0",
         "atlas/orm": "^3.1"
     },
+    "require-dev": {
+        "atlas/cli": "^2.2"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src"
         }
-    },
-    "require-dev": {
-        "atlas/cli": "^2.2"
     }
 }
