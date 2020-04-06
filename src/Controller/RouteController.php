@@ -34,6 +34,24 @@ class RouteController extends BaseController
             ->limit($this->requestLimit)
             ->offset($this->requestOffset);
 
+        // try to sort routes by route sort order
+        // if not applicable: try sorting by short or long name
+        try {
+            $orderedQuery = clone $query;
+            $orderedQuery->orderBy('route_sort_order');
+            $orderedQuery->fetchRecords();
+            $query = $orderedQuery;
+        } catch (\Exception $e1) {
+            try {
+                $orderedQuery = clone $query;
+                $orderedQuery->orderBy('route_short_name');
+                $orderedQuery->fetchRecords();
+                $query = $orderedQuery;
+            } catch (\Exception $e2) {
+                $query->orderBy('route_long_name');
+            }
+        }
+
         return $query->fetchRecords();
     }
 
@@ -84,13 +102,37 @@ class RouteController extends BaseController
         // need cascading try/catch blocks here, because route_short_name and route_long_name are conditionally required.
         // thus one of these fields might be missing and fire an exception during the query.
         try {
-            $query->where('route_short_name LIKE ', '%' . $requestRouteName . '%')
+            $whereQuery = clone $query;
+            $whereQuery->where('route_short_name LIKE ', '%' . $requestRouteName . '%')
                 ->orWhere('route_long_name LIKE ', '%' . $requestRouteName . '%');
+            $whereQuery->fetchRecords();
+            $query = $whereQuery;
         } catch(\Exception $eb) {
             try {
-                $query->where('route_short_name LIKE ', '%' . $requestRouteName . '%');
+                $whereQuery = clone $query;
+                $whereQuery->where('route_short_name LIKE ', '%' . $requestRouteName . '%');
+                $whereQuery->fetchRecords();
+                $query = $whereQuery;
             } catch(\Exception $es) {
                 $query->where('route_long_name LIKE ', '%' . $requestRouteName . '%');
+            }
+        }
+
+        // try to sort routes by route sort order
+        // if not applicable: try sorting by short or long name
+        try {
+            $orderedQuery = clone $query;
+            $orderedQuery->orderBy('route_sort_order');
+            $orderedQuery->fetchRecords();
+            $query = $orderedQuery;
+        } catch (\Exception $e1) {
+            try {
+                $orderedQuery = clone $query;
+                $orderedQuery->orderBy('route_short_name');
+                $orderedQuery->fetchRecords();
+                $query = $orderedQuery;
+            } catch (\Exception $e2) {
+                $query->orderBy('route_long_name');
             }
         }
 
