@@ -127,6 +127,18 @@ Delivers a selection of attributions by their trip ID.
 
 URL: `{yourdomain}/api/v1/attributions/byTripId?tripId={TRIP_ID}`
 
+### Currently Not Supported
+There're are some features, which are currently not supported in this version:
+
+* Currently, a frequency based trip can only be found when the `time` parameter is before
+the original departure time of the trip. If the `time` parameters points to a timestamp after the trip start time (or the departure time at the corresponding
+stop when using the `byStopId` selector) the trip will not be found.
+* Translations are supported by the database schema, but there's no selector for them yet. It is nearly impossible to map them to their fields automatically,
+since they're using dynamic field names. One possible workaround would be to fetch all translations and map them later on application level.
+
+### Latest Changes
+See [CHANGELOG](/CHANGELOG.md) for a overview about the latest changes.
+
 ## Extending & Contribution
 The REST API is designed for easy extending by your own resources and selectors.
 
@@ -140,5 +152,5 @@ methods by adding any method with ne name convention `find{byYourSelector}` - Th
 If you want to contribute this project by adding a basic functionality, you're welcome! Please take a look into existing code to adapt your coding
 style to the existing one. A well-documented source code is also more easy to read and review ;-)
 
-# License
+## License
 This project is licensed under the MIT license. See [LICENSE](LICENSE.md) for more details. 
