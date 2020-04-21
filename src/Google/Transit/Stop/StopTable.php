@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Stop;
+namespace Google\Transit\Stop;
 
 use Atlas\Table\Table;
 

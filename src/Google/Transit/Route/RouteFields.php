@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Route;
+namespace Google\Transit\Route;
 
 /**
  * @property mixed $route_id TEXT
@@ -17,7 +17,6 @@ namespace App\Google\Transit\Route;
  * @property mixed $route_color TEXT
  * @property mixed $route_text_color TEXT
  * @property mixed $route_sort_order INTEGER
- * @property null|false|\App\Google\Transit\Agency\AgencyRecord $agency
  */
 trait RouteFields
 {

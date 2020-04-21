@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\FareRule;
+namespace Google\Transit\FareRule;
 
 /**
  * @property mixed $fare_id TEXT

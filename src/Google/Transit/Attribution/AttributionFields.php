@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Attribution;
+namespace Google\Transit\Attribution;
 
 /**
  * @property mixed $attribution_id TEXT

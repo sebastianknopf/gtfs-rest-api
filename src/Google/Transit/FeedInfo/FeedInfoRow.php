@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\FeedInfo;
+namespace Google\Transit\FeedInfo;
 
 use Atlas\Table\Row;
 

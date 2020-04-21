@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Shape;
+namespace Google\Transit\Shape;
 
 use Atlas\Table\Table;
 

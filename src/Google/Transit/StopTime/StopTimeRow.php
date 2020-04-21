@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\StopTime;
+namespace Google\Transit\StopTime;
 
 use Atlas\Table\Row;
 

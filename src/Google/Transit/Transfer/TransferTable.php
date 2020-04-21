@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Transfer;
+namespace Google\Transit\Transfer;
 
 use Atlas\Table\Table;
 

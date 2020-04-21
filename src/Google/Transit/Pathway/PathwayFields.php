@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Pathway;
+namespace Google\Transit\Pathway;
 
 /**
  * @property mixed $pathway_id TEXT

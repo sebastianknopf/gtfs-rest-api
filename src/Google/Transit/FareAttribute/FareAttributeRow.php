@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\FareAttribute;
+namespace Google\Transit\FareAttribute;
 
 use Atlas\Table\Row;
 

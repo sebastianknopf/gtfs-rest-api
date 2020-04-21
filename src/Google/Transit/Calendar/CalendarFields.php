@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Calendar;
+namespace Google\Transit\Calendar;
 
 /**
  * @property mixed $service_id TEXT
@@ -17,8 +17,6 @@ namespace App\Google\Transit\Calendar;
  * @property mixed $sunday TEXT
  * @property mixed $start_date TEXT
  * @property mixed $end_date TEXT
- * @property null|\App\Google\Transit\Trip\TripRecordSet $trips
- * @property null|\App\Google\Transit\CalendarDate\CalendarDateRecordSet $calendar_dates
  */
 trait CalendarFields
 {

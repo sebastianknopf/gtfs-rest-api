@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Stop;
+namespace Google\Transit\Stop;
 
 /**
  * @property mixed $stop_id TEXT
@@ -21,9 +21,6 @@ namespace App\Google\Transit\Stop;
  * @property mixed $wheelchair_boarding TEXT
  * @property mixed $level_id TEXT
  * @property mixed $platform_code TEXT
- * @property null|\App\Google\Transit\StopTime\StopTimeRecordSet $stop_times
- * @property null|\App\Google\Transit\Transfer\TransferRecordSet $transfers
- * @property null|false|\App\Google\Transit\Level\LevelRecord $level
  */
 trait StopFields
 {

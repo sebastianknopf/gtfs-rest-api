@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\StopTime;
+namespace Google\Transit\StopTime;
 
 /**
  * @property mixed $trip_id TEXT
@@ -17,8 +17,6 @@ namespace App\Google\Transit\StopTime;
  * @property mixed $drop_off_type TEXT
  * @property mixed $shape_dist_traveled REAL
  * @property mixed $timepoint TEXT
- * @property null|false|\App\Google\Transit\Trip\TripRecord $trip
- * @property null|false|\App\Google\Transit\Stop\StopRecord $stop
  */
 trait StopTimeFields
 {

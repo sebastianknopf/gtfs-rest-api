@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\CalendarDate;
+namespace Google\Transit\CalendarDate;
 
 /**
  * @property mixed $service_id TEXT

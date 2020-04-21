@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Google\Transit\Frequency;
+namespace Google\Transit\Frequency;
 
 /**
  * @property mixed $trip_id TEXT
