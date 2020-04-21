@@ -61,15 +61,18 @@ abstract class BaseController {
     public function __invoke(ServerRequest $request, Response $response, $args) {
         $selector = isset($args['selector']) ? $args['selector'] : self::$DEFAULT_SELECTOR;
         $selectorMethod = 'find' . $selector;
+        $postMethod = 'post' . $selector;
 
-        $this->requestLimit = $request->getParam('limit', 100);
-        $this->requestOffset = $request->getParam('offset', 0);
+        if (method_exists($this, $selectorMethod) && $request->isGet()) {
+            $this->requestLimit = $request->getParam('limit', 100);
+            $this->requestOffset = $request->getParam('offset', 0);
 
-        if (method_exists($this, $selectorMethod)) {
             $result = $this->jsonResponse($this->$selectorMethod($request));
             $response = $response->withJson($result);
+        } elseif (method_exists($this, $selectorMethod) && $request->isPost()) {
+            $this->$postMethod($request);
         } else {
-            throw new \RuntimeException('selector method ' . $selector . ' does not exist!');
+            throw new \RuntimeException('controller method ' . $selector . ' does not exist!');
         }
 
         return $response;

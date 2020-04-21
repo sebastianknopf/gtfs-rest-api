@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/JourneyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="composer support for gtfs/realtime-php and gtfs/csa-php for next updates">
+      <change afterPath="$PROJECT_DIR$/src/Controller/RealtimeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +39,47 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+              <folding>
+                <element signature="e#188#227#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/Alert.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1105">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/FeedEntity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3239">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -85,8 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Data/Attribution/AttributionTable.php" />
-        <option value="$PROJECT_DIR$/src/Data/Calendar/CalendarRelationships.php" />
         <option value="$PROJECT_DIR$/src/Data/Agency/AgencyRelationships.php" />
         <option value="$PROJECT_DIR$/src/Data/StopTime/StopTimeRow.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -106,7 +143,6 @@
         <option value="$PROJECT_DIR$/config/skeleton.php" />
         <option value="$PROJECT_DIR$/src/Controller/ResourceController.php" />
         <option value="$PROJECT_DIR$/src/Common/ResourceController.php" />
-        <option value="$PROJECT_DIR$/src/Application.php" />
         <option value="$PROJECT_DIR$/src/Common/ResourceDispatcher.php" />
         <option value="$PROJECT_DIR$/src/Data/FareAttribute/FareAttributeRelationships.php" />
         <option value="$PROJECT_DIR$/src/Common/ControllerDispatcher.php" />
@@ -114,7 +150,6 @@
         <option value="$PROJECT_DIR$/src/Controller/AttributionController.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/config/constants.php" />
-        <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Data/Stop/StopRow.php" />
         <option value="$PROJECT_DIR$/src/Data/Stop/StopRecord.php" />
         <option value="$PROJECT_DIR$/src/Controller/StopController.php" />
@@ -136,6 +171,10 @@
         <option value="$PROJECT_DIR$/src/Controller/QueryController.php" />
         <option value="$PROJECT_DIR$/src/Controller/JourneyController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Common/RealtimePushDispatcher.php" />
+        <option value="$PROJECT_DIR$/src/Application.php" />
+        <option value="$PROJECT_DIR$/src/Controller/RealtimeController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
       </list>
     </option>
   </component>
@@ -191,6 +230,79 @@
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
+              <item name="Transit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
+              <item name="Transit" type="462c0819:PsiDirectoryNode" />
+              <item name="Realtime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -254,7 +366,7 @@
       <workItem from="1586369059970" duration="2616000" />
       <workItem from="1586779463101" duration="2367000" />
       <workItem from="1586936977224" duration="3553000" />
-      <workItem from="1587446702306" duration="256000" />
+      <workItem from="1587446702306" duration="2729000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1585647756764</created>
@@ -417,11 +529,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586937758503</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="composer support for gtfs/realtime-php and gtfs/csa-php for next updates">
+      <created>1587446989394</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1587446989394</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115333000" />
+    <option name="totallyTimeSpent" value="117806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,6 +553,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -484,38 +604,11 @@
     <MESSAGE value="improved order of routes" />
     <MESSAGE value="bugfix in TripController - improved ordering by departure time" />
     <MESSAGE value="added CHANGELOG.md and updated information" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CHANGELOG.md and updated information" />
+    <MESSAGE value="composer support for gtfs/realtime-php and gtfs/csa-php for next updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="composer support for gtfs/realtime-php and gtfs/csa-php for next updates" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopEvents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopSelect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/CalendarDate/CalendarDateTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Transfer/TransferTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="94" column="22" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
@@ -606,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Google/Transit/FareAttribute/FareAttributeRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -620,13 +706,6 @@
           <folding>
             <element signature="e#221#252#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/ControllerDispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -652,13 +731,6 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -834,23 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/JourneyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-          <folding>
-            <element signature="e#188#229#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/TripController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3689">
@@ -866,6 +921,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/JourneyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="23" selection-end-column="63" />
+          <folding>
+            <element signature="e#188#229#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/RealtimePushDispatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="e#187#204#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/ControllerDispatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/FeedEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3239">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/Alert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding>
+            <element signature="e#188#227#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
         </state>
       </provider>
     </entry>

@@ -60,6 +60,7 @@ $app->addErrorMiddleware(
 // add endpoint routes
 $app->group('/api/v1', function (RouteCollectorProxy $group) {
     $group->get('/{resource}/[{selector}]', ControllerDispatcher::class);
+    $group->post('/{resource}/{selector}/', ControllerDispatcher::class);
 });
 
 // run application
