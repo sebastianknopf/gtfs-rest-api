@@ -14,7 +14,9 @@
         "slim/psr7": "^1.0",
         "slim/http": "^1.0",
         "php-di/php-di": "^6.0",
-        "atlas/orm": "^3.1"
+        "atlas/orm": "^3.1",
+        "gtfs/csa-php": "^1.0",
+        "gtfs/realtime-php": "^1.0"
     },
     "require-dev": {
         "atlas/cli": "^2.2"

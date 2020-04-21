@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "890b5118564dd85b70f58df4c53f4bd8",
+    "content-hash": "c58a92feb6ec29968d09745159aad549",
     "packages": [
         {
             "name": "atlas/mapper",
@@ -326,6 +326,111 @@
             "time": "2020-02-05T20:36:27+00:00"
         },
         {
+            "name": "google/protobuf",
+            "version": "v3.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/protocolbuffers/protobuf-php.git",
+                "reference": "5dffdd2c84112e6c91fd84f92e3df96649426881"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5dffdd2c84112e6c91fd84f92e3df96649426881",
+                "reference": "5dffdd2c84112e6c91fd84f92e3df96649426881",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8.0"
+            },
+            "suggest": {
+                "ext-bcmath": "Need to support JSON deserialization"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\Protobuf\\": "src/Google/Protobuf",
+                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "proto library for PHP",
+            "homepage": "https://developers.google.com/protocol-buffers/",
+            "keywords": [
+                "proto"
+            ],
+            "time": "2019-10-03T20:08:37+00:00"
+        },
+        {
+            "name": "gtfs/csa-php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianknopf/gtfs-csa-php.git",
+                "reference": "d5739f3a5e41551c45b876f505fdfc2de787ae7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianknopf/gtfs-csa-php/zipball/d5739f3a5e41551c45b876f505fdfc2de787ae7a",
+                "reference": "d5739f3a5e41551c45b876f505fdfc2de787ae7a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CSA\\": "src/CSA"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Knopf",
+                    "email": "mail@sebastian-knopf.de"
+                }
+            ],
+            "description": "Simple routing algorithm based on CSA and GTFS",
+            "time": "2020-02-09T07:35:32+00:00"
+        },
+        {
+            "name": "gtfs/realtime-php",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianknopf/gtfs-realtime-php.git",
+                "reference": "83c8f777ce52b0061fc3a2e200832767a8fa8bb9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianknopf/gtfs-realtime-php/zipball/83c8f777ce52b0061fc3a2e200832767a8fa8bb9",
+                "reference": "83c8f777ce52b0061fc3a2e200832767a8fa8bb9",
+                "shasum": ""
+            },
+            "require": {
+                "google/protobuf": "3.10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\Transit\\Realtime\\": "src/Google/Transit/Realtime",
+                    "GPBMetadata\\Src\\": "src/GPBMetadata"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "The Unlicense"
+            ],
+            "description": "GTFS-Realtime library for PHP",
+            "time": "2019-10-20T19:17:36+00:00"
+        },
+        {
             "name": "jeremeamia/superclosure",
             "version": "2.4.0",
             "source": {
@@ -381,6 +486,7 @@
                 "serialize",
                 "tokenizer"
             ],
+            "abandoned": "opis/closure",
             "time": "2018-03-21T22:21:57+00:00"
         },
         {
