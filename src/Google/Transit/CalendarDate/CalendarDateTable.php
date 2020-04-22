@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\CalendarDate;
+namespace App\Google\Transit\CalendarDate;
 
 use Atlas\Table\Table;
 

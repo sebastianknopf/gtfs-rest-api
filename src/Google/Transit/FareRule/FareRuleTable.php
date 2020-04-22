@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\FareRule;
+namespace App\Google\Transit\FareRule;
 
 use Atlas\Table\Table;
 

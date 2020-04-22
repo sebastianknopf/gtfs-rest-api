@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeStopTimeUpdate;
+namespace App\Google\Transit\RealtimeStopTimeUpdate;
 
 /**
  * @property mixed $trip_update_id INTEGER

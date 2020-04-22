@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Level;
+namespace App\Google\Transit\Level;
 
 use Atlas\Table\Table;
 

@@ -69,7 +69,7 @@ abstract class BaseController {
 
             $result = $this->jsonResponse($this->$selectorMethod($request));
             $response = $response->withJson($result);
-        } elseif (method_exists($this, $selectorMethod) && $request->isPost()) {
+        } elseif (method_exists($this, $postMethod) && $request->isPost()) {
             $this->$postMethod($request);
         } else {
             throw new \RuntimeException('controller method ' . $selector . ' does not exist!');

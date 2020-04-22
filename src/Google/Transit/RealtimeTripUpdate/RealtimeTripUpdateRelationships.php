@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeTripUpdate;
+namespace App\Google\Transit\RealtimeTripUpdate;
 
+use App\Google\Transit\RealtimeStopTimeUpdate\RealtimeStopTimeUpdate;
+use App\Google\Transit\RealtimeVehiclePosition\RealtimeVehiclePosition;
 use App\Mapper\NullableMapperRelationships;
-use Google\Transit\RealtimeStopTimeUpdate\RealtimeStopTimeUpdate;
-use Google\Transit\RealtimeVehiclePosition\RealtimeVehiclePosition;
 
 class RealtimeTripUpdateRelationships extends NullableMapperRelationships
 {

@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\FeedInfo;
+namespace App\Google\Transit\FeedInfo;
 
 /**
  * @property mixed $feed_publisher_name TEXT

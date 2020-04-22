@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeAlert;
+namespace App\Google\Transit\RealtimeAlert;
 
 /**
  * @property mixed $alert_id INTEGER

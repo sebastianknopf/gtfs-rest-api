@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Pathway;
+namespace App\Google\Transit\Pathway;
 
 use Atlas\Table\Row;
 

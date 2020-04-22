@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Translation;
+namespace App\Google\Transit\Translation;
 
 /**
  * @property mixed $table_name TEXT

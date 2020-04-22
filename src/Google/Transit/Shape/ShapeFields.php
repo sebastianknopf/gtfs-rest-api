@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Shape;
+namespace App\Google\Transit\Shape;
 
 /**
  * @property mixed $shape_id TEXT

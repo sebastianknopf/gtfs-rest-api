@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeTripUpdate;
+namespace App\Google\Transit\RealtimeTripUpdate;
 
 use Atlas\Mapper\RecordSet;
 

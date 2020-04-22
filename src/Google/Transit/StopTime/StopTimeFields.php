@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\StopTime;
+namespace App\Google\Transit\StopTime;
 
 /**
  * @property mixed $trip_id TEXT

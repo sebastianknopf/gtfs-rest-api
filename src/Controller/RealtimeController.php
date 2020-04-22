@@ -8,6 +8,9 @@
 
 namespace App\Controller;
 
+use App\Google\Transit\RealtimeAlert\RealtimeAlert;
+use App\Google\Transit\RealtimeAlertEntity\RealtimeAlertEntity;
+use App\Google\Transit\RealtimeAlertTimerange\RealtimeAlertTimerange;
 use Google\Transit\Realtime\FeedMessage;
 use Slim\Http\ServerRequest;
 
@@ -30,16 +33,53 @@ class RealtimeController extends BaseController
      * @throws \Exception When the message could not be processed
      */
     protected function postAlerts(ServerRequest $request) {
-        $bodyPbf = $request->getBody();
+        $bodyPbf = $request->getBody()->getContents();
 
         $feedMessage = new FeedMessage();
         $feedMessage->mergeFromString($bodyPbf);
 
+        $this->orm->beginTransaction();
+
         foreach ($feedMessage->getEntity() as $feedEntity) {
             if ($feedEntity->getAlert() != null) {
+                $alertMessage = $feedEntity->getAlert();
 
+                $timeRanges = $this->orm->newRecordSet(RealtimeAlertTimerange::class);
+                foreach ($alertMessage->getActivePeriod() as $activePeriod) {
+                    $timeRanges->appendNew([
+                        'start_time' => $activePeriod->getStart(),
+                        'end_time' => $activePeriod->getEnd()
+                    ]);
+                }
+
+                $informedEntities = $this->orm->newRecordSet(RealtimeAlertEntity::class);
+                foreach ($alertMessage->getInformedEntity() as $informedEntity) {
+                    $informedEntities->appendNew([
+                        'stop_id' => $informedEntity->getStopId(),
+                        'agency_id' => $informedEntity->getAgencyId(),
+                        'route_id' => $informedEntity->getRouteId(),
+                        'route_type' => $informedEntity->getRouteType(),
+                        'trip_id' => $informedEntity->getTrip() != null ? $informedEntity->getTrip()->getTripId() : null,
+                        'trip_start_date' => $informedEntity->getTrip() != null ? $informedEntity->getTrip()->getStartDate() : null,
+                        'trip_start_time' => $informedEntity->getTrip() != null ? $informedEntity->getTrip()->getStartTime() : null,
+                    ]);
+                }
+
+                $alert = $this->orm->newRecord(RealtimeAlert::class, [
+                    'alert_cause' => $alertMessage->getCause(),
+                    'alert_effect' => $alertMessage->getEffect(),
+                    'alert_url' => $alertMessage->getUrl() != null ? $alertMessage->getUrl()->getTranslation()[0]->getText() : null,
+                    'alert_header_text' => $alertMessage->getHeaderText() != null ? $alertMessage->getHeaderText()->getTranslation()[0]->getText() : null,
+                    'alert_description_text' => $alertMessage != null ? $alertMessage->getDescriptionText()->getTranslation()[0]->getText() : null,
+                    'time_ranges' => $timeRanges,
+                    'informed_entities' => $informedEntities
+                ]);
+
+                $this->orm->persist($alert);
             }
         }
+
+        $this->orm->commit();
     }
 
     /**
@@ -48,7 +88,7 @@ class RealtimeController extends BaseController
      * @param ServerRequest $request
      * @throws \Exception When the message could not be processed
      */
-    protected function postTripUpdate(ServerRequest $request) {
+    protected function postTripUpdates(ServerRequest $request) {
         $bodyPbf = $request->getBody();
 
         $feedMessage = new FeedMessage();

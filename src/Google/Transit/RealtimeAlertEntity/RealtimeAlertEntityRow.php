@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeAlertEntity;
+namespace App\Google\Transit\RealtimeAlertEntity;
 
 use Atlas\Table\Row;
 

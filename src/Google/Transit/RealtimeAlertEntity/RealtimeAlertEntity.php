@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeAlertEntity;
+namespace App\Google\Transit\RealtimeAlertEntity;
 
 use Atlas\Mapper\Mapper;
 use Atlas\Table\Row;

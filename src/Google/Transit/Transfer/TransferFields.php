@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Transfer;
+namespace App\Google\Transit\Transfer;
 
 /**
  * @property mixed $from_stop_id TEXT

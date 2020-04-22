@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Route;
+namespace App\Google\Transit\Route;
 
 use Atlas\Table\Table;
 

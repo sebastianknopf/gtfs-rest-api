@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeAlert;
+namespace App\Google\Transit\RealtimeAlert;
 
+use App\Google\Transit\RealtimeAlertEntity\RealtimeAlertEntity;
+use App\Google\Transit\RealtimeAlertTimerange\RealtimeAlertTimerange;
 use Atlas\Mapper\MapperRelationships;
-use Google\Transit\RealtimeAlertEntity\RealtimeAlertEntity;
-use Google\Transit\RealtimeAlertTimerange\RealtimeAlertTimerange;
 
 class RealtimeAlertRelationships extends MapperRelationships
 {
@@ -15,7 +15,7 @@ class RealtimeAlertRelationships extends MapperRelationships
             'alert_id' => 'alert_id'
         ]);
 
-        $this->oneToMany('entities', RealtimeAlertEntity::class, [
+        $this->oneToMany('informed_entities', RealtimeAlertEntity::class, [
             'alert_id' => 'alert_id'
         ]);
     }

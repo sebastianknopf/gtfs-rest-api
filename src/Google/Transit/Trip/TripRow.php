@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Trip;
+namespace App\Google\Transit\Trip;
 
 use Atlas\Table\Row;
 

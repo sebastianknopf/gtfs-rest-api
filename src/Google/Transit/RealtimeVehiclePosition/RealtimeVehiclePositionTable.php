@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeVehiclePosition;
+namespace App\Google\Transit\RealtimeVehiclePosition;
 
 use Atlas\Table\Table;
 

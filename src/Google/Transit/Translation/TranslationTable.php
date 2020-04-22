@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Translation;
+namespace App\Google\Transit\Translation;
 
 use Atlas\Table\Table;
 

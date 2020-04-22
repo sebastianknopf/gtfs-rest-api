@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Trip;
+namespace App\Google\Transit\Trip;
 
 /**
  * @property mixed $route_id TEXT

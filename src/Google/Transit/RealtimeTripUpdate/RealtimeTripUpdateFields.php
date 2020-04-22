@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\RealtimeTripUpdate;
+namespace App\Google\Transit\RealtimeTripUpdate;
 
 /**
  * @property mixed $trip_update_id INTEGER NOT NULL

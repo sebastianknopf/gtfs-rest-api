@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Google\Transit\Attribution;
+namespace App\Google\Transit\Attribution;
 
 use Atlas\Table\Row;
 
