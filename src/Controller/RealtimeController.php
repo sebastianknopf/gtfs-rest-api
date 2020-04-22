@@ -11,6 +11,8 @@ namespace App\Controller;
 use App\Google\Transit\RealtimeAlert\RealtimeAlert;
 use App\Google\Transit\RealtimeAlertEntity\RealtimeAlertEntity;
 use App\Google\Transit\RealtimeAlertTimerange\RealtimeAlertTimerange;
+use App\Google\Transit\RealtimeStopTimeUpdate\RealtimeStopTimeUpdate;
+use App\Google\Transit\RealtimeTripUpdate\RealtimeTripUpdate;
 use Google\Transit\Realtime\FeedMessage;
 use Slim\Http\ServerRequest;
 
@@ -89,16 +91,66 @@ class RealtimeController extends BaseController
      * @throws \Exception When the message could not be processed
      */
     protected function postTripUpdates(ServerRequest $request) {
-        $bodyPbf = $request->getBody();
+        $bodyPbf = $request->getBody()->getContents();
 
         $feedMessage = new FeedMessage();
         $feedMessage->mergeFromString($bodyPbf);
 
+        $this->orm->beginTransaction();
+
         foreach ($feedMessage->getEntity() as $feedEntity) {
             if ($feedEntity->getTripUpdate() != null) {
+                $tripUpdateMessage = $feedEntity->getTripUpdate();
 
+                // delete existing trip update from database
+                $tripDescriptor = [
+                    'trip_id' => $tripUpdateMessage->getTrip()->getTripId(),
+                    'route_id' => $tripUpdateMessage->getTrip()->getRouteId(),
+                    'trip_start_date' => $tripUpdateMessage->getTrip()->getStartDate(),
+                    'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime()
+                ];
+
+                $existingUpdate = $this->orm
+                    ->select(RealtimeTripUpdate::class)
+                    ->whereEquals($tripDescriptor)
+                    ->fetchRecord();
+
+                if ($existingUpdate != null) {
+                    $this->orm->delete($existingUpdate);
+                    $this->orm->persist($existingUpdate);
+                }
+
+                // build new trip update
+                $stopTimeUpdates = $this->orm->newRecordSet(RealtimeStopTimeUpdate::class);
+                foreach ($tripUpdateMessage->getStopTimeUpdate() as $stopTimeUpdate) {
+                    $stopTimeUpdates->appendNew([
+                        'stop_id' => $stopTimeUpdate->getStopId(),
+                        'stop_sequence' => $stopTimeUpdate->getStopSequence(),
+                        'arrival_delay' => $stopTimeUpdate->getArrival() != null ? $stopTimeUpdate->getArrival()->getDelay() : 0,
+                        'arrival_time' => $stopTimeUpdate->getArrival() != null ? $stopTimeUpdate->getArrival()->getTime() : 0,
+                        'arrival_uncertainty' => $stopTimeUpdate->getArrival() != null ? $stopTimeUpdate->getArrival()->getUncertainty() : 0,
+                        'departure_delay' => $stopTimeUpdate->getDeparture() != null ? $stopTimeUpdate->getDeparture()->getDelay() : 0,
+                        'departure_time' => $stopTimeUpdate->getDeparture() != null ? $stopTimeUpdate->getDeparture()->getTime() : 0,
+                        'departure_uncertainty' => $stopTimeUpdate->getDeparture() != null ? $stopTimeUpdate->getDeparture()->getUncertainty() : 0,
+                        'schedule_relationship' => $stopTimeUpdate->getScheduleRelationship()
+                    ]);
+                }
+
+                $tripUpdate = $this->orm->newRecord(RealtimeTripUpdate::class, [
+                    'trip_id' => $tripUpdateMessage->getTrip()->getTripId(),
+                    'route_id' => $tripUpdateMessage->getTrip()->getRouteId(),
+                    'trip_start_date' => $tripUpdateMessage->getTrip()->getStartDate(),
+                    'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime(),
+                    'schedule_relationship' => $tripUpdateMessage->getTrip()->getScheduleRelationship(),
+                    'vehicle_id' => $tripUpdateMessage->getVehicle() != null ? $tripUpdateMessage->getVehicle()->getId() : null,
+                    'stop_time_updates' => $stopTimeUpdates
+                ]);
+
+                $this->orm->persist($tripUpdate);
             }
         }
+
+        $this->orm->commit();
     }
 
     /**

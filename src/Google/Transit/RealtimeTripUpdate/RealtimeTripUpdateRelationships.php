@@ -11,9 +11,9 @@ class RealtimeTripUpdateRelationships extends NullableMapperRelationships
 {
     protected function define()
     {
-        $this->oneToMany('stop_times', RealtimeStopTimeUpdate::class, [
+        $this->oneToMany('stop_time_updates', RealtimeStopTimeUpdate::class, [
             'trip_update_id' => 'trip_update_id'
-        ]);
+        ])->onDeleteSetDelete();
 
         $this->nullableOneToOne('vehicle_position', RealtimeVehiclePosition::class, [
             'vehicle_id' => 'vehicle_id'
