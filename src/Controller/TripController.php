@@ -10,6 +10,7 @@ namespace App\Controller;
 
 use App\Google\Transit\Calendar\Calendar;
 use App\Google\Transit\CalendarDate\CalendarDate;
+use App\Google\Transit\RealtimeTripUpdate\RealtimeTripUpdate;
 use App\Google\Transit\Stop\Stop;
 use App\Google\Transit\StopTime\StopTimeTable;
 use App\Google\Transit\Trip\Trip;
@@ -223,6 +224,54 @@ class TripController extends BaseController
         }
 
         return $query->fetchRecords();
+    }
+
+    /**
+     * Selects a single trip by its serving vehicle ID. This selector is only available
+     * when GTFS-realtime data are updated!
+     *
+     * @param ServerRequest $request The server request instance
+     * @return mixed Array with matching trip object(s)
+     */
+    protected function findByVehicleId(ServerRequest $request) {
+        $requestVehicleId = $request->getParam('vehicleId', null);
+
+        if ($requestVehicleId == null) {
+            throw new \RuntimeException('missing parameter vehicleId!');
+        }
+
+        // request trip id by vehicle from realtime data
+        $realtimeRecord = $this->orm
+            ->select(RealtimeTripUpdate::class)
+            ->where('vehicle_id =', $requestVehicleId)
+            ->fetchRecord();
+
+        if ($realtimeRecord == null) {
+            return [];
+        }
+
+        $tripId = $realtimeRecord->trip_id;
+
+        $query = $this->orm
+            ->select(Trip::class)
+            ->with([
+                'route' => [
+                    'agency'
+                ],
+                'stop_times' => function ($select) {
+                    $select->with(['stop'])->orderBy('stop_sequence');
+                },
+                'calendar' => [
+                    'calendar_dates'
+                ],
+                'frequencies',
+                'shape_points' => function ($select) {
+                    $select->orderBy('shape_pt_sequence');
+                }
+            ])
+            ->where('trip_id = ', $tripId);
+
+        return [$query->fetchRecord()];
     }
 
     /**
