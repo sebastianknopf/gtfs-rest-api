@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/GTFS.db3" beforeDir="false" afterPath="$PROJECT_DIR$/data/GTFS.db3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RealtimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RealtimeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyFields.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Agency/AgencyRow.php" afterDir="false" />
@@ -38,72 +35,24 @@
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayFields.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayRow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Pathway/PathwayTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRecordSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRelationships.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertSelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTableEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTableSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRecordSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRelationships.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntitySelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntitySelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityTableEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityTableSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerange.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerange.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRecordSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRelationships.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeSelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeTableEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeAlertTimerange/RealtimeAlertTimerangeTableSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRecordSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRelationships.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateSelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTableEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTableSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRecordSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRelationships.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateSelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTableEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTableSelect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePosition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePosition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionEvents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionFields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRecordSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRecordSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRelationships.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRelationships.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionRow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionSelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionTableEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionTableEvents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionTableSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionTableSelect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Route/RouteFields.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteFields.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Route/RouteRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteRow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Google/Transit/Route/RouteTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Google/Transit/Route/RouteTable.php" afterDir="false" />
@@ -162,11 +111,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+            <state relative-caret-position="95">
+              <caret line="184" column="48" selection-start-line="184" selection-start-column="48" selection-end-line="184" selection-end-column="48" />
               <folding>
                 <element signature="e#187#238#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -218,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/logs/queries.log" />
-        <option value="$PROJECT_DIR$/src/Common/QueryLogger.php" />
         <option value="$PROJECT_DIR$/src/Data/StopTime/StopTimeSelect.php" />
         <option value="$PROJECT_DIR$/src/Data/Shape/ShapeRelationships.php" />
         <option value="$PROJECT_DIR$/src/Data/Frequency/FrequencyTable.php" />
@@ -262,12 +218,14 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Common/RealtimePushDispatcher.php" />
         <option value="$PROJECT_DIR$/config/constants.php" />
-        <option value="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRelationships.php" />
         <option value="$PROJECT_DIR$/src/Application.php" />
         <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRelationships.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertEvents.php" />
+        <option value="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateEvents.php" />
+        <option value="$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRelationships.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/vendor/atlas/table/src/Table.php" />
         <option value="$PROJECT_DIR$/src/Controller/RealtimeController.php" />
       </list>
     </option>
@@ -360,7 +318,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Google" type="462c0819:PsiDirectoryNode" />
               <item name="Transit" type="462c0819:PsiDirectoryNode" />
-              <item name="RealtimeAlertEntity" type="462c0819:PsiDirectoryNode" />
+              <item name="RealtimeTripUpdate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
+              <item name="Transit" type="462c0819:PsiDirectoryNode" />
+              <item name="RealtimeVehiclePosition" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
@@ -377,52 +343,31 @@
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
+              <item name="atlas" type="462c0819:PsiDirectoryNode" />
+              <item name="orm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+              <item name="atlas" type="462c0819:PsiDirectoryNode" />
+              <item name="orm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
+              <item name="atlas" type="462c0819:PsiDirectoryNode" />
+              <item name="table" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
+              <item name="atlas" type="462c0819:PsiDirectoryNode" />
+              <item name="table" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-              <item name="Realtime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,7 +431,7 @@
       <workItem from="1586369059970" duration="2616000" />
       <workItem from="1586779463101" duration="2367000" />
       <workItem from="1586936977224" duration="3553000" />
-      <workItem from="1587446702306" duration="15998000" />
+      <workItem from="1587446702306" duration="25127000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1585647756764</created>
@@ -670,11 +615,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587473442824</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="basic implementation for posting GTFS-realtime alerts">
+      <created>1587548242704</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1587548242704</updated>
+    </task>
+    <task id="LOCAL-00028" summary="implementation for posting GTFS-relatime trip updates">
+      <created>1587560796933</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1587560796933</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131075000" />
+    <option name="totallyTimeSpent" value="140204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,7 +648,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19722815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -702,7 +661,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733475" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733475" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -715,8 +674,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added file information header" />
-    <MESSAGE value="switched configuration to production level" />
     <MESSAGE value="optimized controller structure and added documentation" />
     <MESSAGE value="defined table relations and basic findAll selector methods" />
     <MESSAGE value="implemented basic common selector methods" />
@@ -740,107 +697,12 @@
     <MESSAGE value="composer support for gtfs/realtime-php and gtfs/csa-php for next updates" />
     <MESSAGE value="added basic controller support for GTFS-realtime and POST calls" />
     <MESSAGE value="generated GTFS-realtime model classes and internal relationships" />
-    <option name="LAST_COMMIT_MESSAGE" value="generated GTFS-realtime model classes and internal relationships" />
+    <MESSAGE value="basic implementation for posting GTFS-realtime alerts" />
+    <MESSAGE value="implementation for posting GTFS-relatime trip updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementation for posting GTFS-relatime trip updates" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopTableSelect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopRow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopFields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/Stop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/StopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="205" column="27" selection-start-line="205" selection-start-column="27" selection-end-line="205" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Stop/StopRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/Route/RouteRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#213#240#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/StopTime/StopTimeRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToOne.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToMany.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="e#197#221#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mapper/Relationship/NullableManyToOne.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" selection-start-line="13" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Mapper/NullableMapperRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -892,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/JourneyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -926,27 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/FeedEntity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3239">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Google/Transit/Trip/TripRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="e#78#121#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Google/Transit/Pathway/Pathway.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1024,13 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertFields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1076,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-927">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTableEvents.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1090,24 +907,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/atlas/table/src/Table.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityFields.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1547">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="78" />
+        <state relative-caret-position="306">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/TripDescriptor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2227">
+        <state relative-caret-position="-952">
           <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/TripUpdate/StopTimeUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/TripUpdate/StopTimeEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertFields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateFields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeStopTimeUpdate/RealtimeStopTimeUpdateFields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/VehicleDescriptor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1054">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1121,17 +994,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlertEntity/RealtimeAlertEntityFields.php">
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateEvents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/TripUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/Position.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeVehiclePosition/RealtimeVehiclePositionFields.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/VehiclePosition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gtfs/realtime-php/src/Google/Transit/Realtime/FeedEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeTripUpdate/RealtimeTripUpdateRelationships.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/atlas/orm/src/Atlas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/atlas/table/src/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="247" column="43" selection-start-line="247" selection-start-column="43" selection-end-line="247" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+        <state relative-caret-position="95">
+          <caret line="184" column="48" selection-start-line="184" selection-start-column="48" selection-end-line="184" selection-end-column="48" />
           <folding>
             <element signature="e#187#238#0#PHP" expanded="true" />
           </folding>

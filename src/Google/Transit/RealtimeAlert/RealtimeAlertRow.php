@@ -9,7 +9,7 @@ namespace App\Google\Transit\RealtimeAlert;
 use Atlas\Table\Row;
 
 /**
- * @property mixed $alert_id INTEGER
+ * @property mixed $alert_id INTEGER NOT NULL
  * @property mixed $alert_cause TEXT
  * @property mixed $alert_effect TEXT
  * @property mixed $alert_url TEXT

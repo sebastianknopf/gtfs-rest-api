@@ -13,6 +13,7 @@ use App\Google\Transit\RealtimeAlertEntity\RealtimeAlertEntity;
 use App\Google\Transit\RealtimeAlertTimerange\RealtimeAlertTimerange;
 use App\Google\Transit\RealtimeStopTimeUpdate\RealtimeStopTimeUpdate;
 use App\Google\Transit\RealtimeTripUpdate\RealtimeTripUpdate;
+use App\Google\Transit\RealtimeVehiclePosition\RealtimeVehiclePosition;
 use Google\Transit\Realtime\FeedMessage;
 use Slim\Http\ServerRequest;
 
@@ -158,15 +159,49 @@ class RealtimeController extends BaseController
      * @throws \Exception When the message could not be processed
      */
     protected function postVehiclePositions(ServerRequest $request) {
-        $bodyPbf = $request->getBody();
+        $bodyPbf = $request->getBody()->getContents();
 
         $feedMessage = new FeedMessage();
         $feedMessage->mergeFromString($bodyPbf);
 
+        $this->orm->beginTransaction();
+
         foreach($feedMessage->getEntity() as $feedEntity) {
             if ($feedEntity->getVehicle() != null) {
+                $vehiclePositionMessage = $feedEntity->getVehicle();
 
+                // delete existing vehicle position from database
+                $vehicleDescriptor = [
+                    'vehicle_id' => $vehiclePositionMessage->getVehicle()->getId(),
+                    'vehicle_label' => $vehiclePositionMessage->getVehicle()->getLabel(),
+                    'vehicle_license_plate' => $vehiclePositionMessage->getVehicle()->getLicensePlate()
+                ];
+
+                $existingPosition = $this->orm
+                    ->select(RealtimeVehiclePosition::class)
+                    ->whereEquals($vehicleDescriptor)
+                    ->fetchRecord();
+
+                if ($existingPosition != null) {
+                    $this->orm->delete($existingPosition);
+                }
+
+                // build new vehicle position
+                $vehiclePosition = $this->orm->newRecord(RealtimeVehiclePosition::class, [
+                    'vehicle_id' => $vehiclePositionMessage->getVehicle()->getId(),
+                    'timestamp' => $vehiclePositionMessage->getTimestamp(),
+                    'vehicle_label' => $vehiclePositionMessage->getVehicle()->getLabel(),
+                    'vehicle_license_plate' => $vehiclePositionMessage->getVehicle()->getLicensePlate(),
+                    'position_lat' => $vehiclePositionMessage->getPosition()->getLatitude(),
+                    'position_lon' => $vehiclePositionMessage->getPosition()->getLongitude(),
+                    'position_bearing' => $vehiclePositionMessage->getPosition()->getBearing(),
+                    'position_speed' => $vehiclePositionMessage->getPosition()->getSpeed()
+                ]);
+
+                $this->orm->insert($vehiclePosition);
             }
         }
+
+        $this->orm->commit();
     }
 }

@@ -30,7 +30,7 @@ class RealtimeVehiclePositionTable extends Table
   'notnull' => true,
   'default' => NULL,
   'autoinc' => false,
-  'primary' => false,
+  'primary' => true,
   'options' => NULL,
 ),
         'timestamp' => array (
@@ -135,6 +135,7 @@ class RealtimeVehiclePositionTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'vehicle_id',
     ];
 
     const AUTOINC_COLUMN = null;

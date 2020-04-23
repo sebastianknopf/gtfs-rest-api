@@ -7,12 +7,14 @@ declare(strict_types=1);
 namespace App\Google\Transit\RealtimeAlert;
 
 /**
- * @property mixed $alert_id INTEGER
+ * @property mixed $alert_id INTEGER NOT NULL
  * @property mixed $alert_cause TEXT
  * @property mixed $alert_effect TEXT
  * @property mixed $alert_url TEXT
  * @property mixed $alert_header_text TEXT
  * @property mixed $alert_description_text TEXT
+ * @property null|\App\Google\Transit\RealtimeAlertTimerange\RealtimeAlertTimerangeRecordSet $time_ranges
+ * @property null|\App\Google\Transit\RealtimeAlertEntity\RealtimeAlertEntityRecordSet $informed_entities
  */
 trait RealtimeAlertFields
 {

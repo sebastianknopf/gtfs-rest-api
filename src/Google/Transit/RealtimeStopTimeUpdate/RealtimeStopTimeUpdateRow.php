@@ -13,11 +13,11 @@ use Atlas\Table\Row;
  * @property mixed $stop_id TEXT
  * @property mixed $stop_sequence INTEGER
  * @property mixed $arrival_delay INTEGER
- * @property mixed $arrival_time TEXT
- * @property mixed $arrival_uncertainty TEXT
+ * @property mixed $arrival_time INTEGER
+ * @property mixed $arrival_uncertainty INTEGER
  * @property mixed $depature_delay INTEGER
- * @property mixed $departure_time TEXT
- * @property mixed $departure_uncertainty TEXT
+ * @property mixed $departure_time INTEGER
+ * @property mixed $departure_uncertainty INTEGER
  * @property mixed $schedule_relationship TEXT
  */
 class RealtimeStopTimeUpdateRow extends Row

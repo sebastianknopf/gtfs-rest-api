@@ -17,6 +17,12 @@ namespace App\Google\Transit\Trip;
  * @property mixed $shape_id TEXT
  * @property mixed $wheelchair_accessible TEXT
  * @property mixed $bikes_allowed TEXT
+ * @property null|false|\App\Google\Transit\Route\RouteRecord $route
+ * @property null|false|\App\Google\Transit\Calendar\CalendarRecord $service
+ * @property null|false|\App\Google\Transit\Calendar\CalendarRecord $calendar
+ * @property null|\App\Google\Transit\StopTime\StopTimeRecordSet $stop_times
+ * @property null|\App\Google\Transit\Frequency\FrequencyRecordSet $frequencies
+ * @property null|\App\Google\Transit\Shape\ShapeRecordSet $shape_points
  */
 trait TripFields
 {

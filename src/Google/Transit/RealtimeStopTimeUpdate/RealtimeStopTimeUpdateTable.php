@@ -68,7 +68,7 @@ class RealtimeStopTimeUpdateTable extends Table
 ),
         'arrival_time' => array (
   'name' => 'arrival_time',
-  'type' => 'TEXT',
+  'type' => 'INTEGER',
   'size' => NULL,
   'scale' => NULL,
   'notnull' => false,
@@ -79,7 +79,7 @@ class RealtimeStopTimeUpdateTable extends Table
 ),
         'arrival_uncertainty' => array (
   'name' => 'arrival_uncertainty',
-  'type' => 'TEXT',
+  'type' => 'INTEGER',
   'size' => NULL,
   'scale' => NULL,
   'notnull' => false,
@@ -101,7 +101,7 @@ class RealtimeStopTimeUpdateTable extends Table
 ),
         'departure_time' => array (
   'name' => 'departure_time',
-  'type' => 'TEXT',
+  'type' => 'INTEGER',
   'size' => NULL,
   'scale' => NULL,
   'notnull' => false,
@@ -112,7 +112,7 @@ class RealtimeStopTimeUpdateTable extends Table
 ),
         'departure_uncertainty' => array (
   'name' => 'departure_uncertainty',
-  'type' => 'TEXT',
+  'type' => 'INTEGER',
   'size' => NULL,
   'scale' => NULL,
   'notnull' => false,

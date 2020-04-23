@@ -27,10 +27,10 @@ class RealtimeAlertTable extends Table
   'type' => 'INTEGER',
   'size' => NULL,
   'scale' => NULL,
-  'notnull' => false,
+  'notnull' => true,
   'default' => NULL,
-  'autoinc' => false,
-  'primary' => false,
+  'autoinc' => true,
+  'primary' => true,
   'options' => NULL,
 ),
         'alert_cause' => array (
@@ -109,9 +109,10 @@ class RealtimeAlertTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        'alert_id',
     ];
 
-    const AUTOINC_COLUMN = null;
+    const AUTOINC_COLUMN = 'alert_id';
 
     const AUTOINC_SEQUENCE = null;
 }

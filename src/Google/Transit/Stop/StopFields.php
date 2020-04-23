@@ -21,6 +21,10 @@ namespace App\Google\Transit\Stop;
  * @property mixed $wheelchair_boarding TEXT
  * @property mixed $level_id TEXT
  * @property mixed $platform_code TEXT
+ * @property null|false|\App\Google\Transit\Level\LevelRecord $level
+ * @property null|\App\Google\Transit\Transfer\TransferRecordSet $transfers
+ * @property null|\App\Google\Transit\Pathway\PathwayRecordSet $pathways
+ * @property null|\App\Google\Transit\Stop\StopRecordSet $child_stops
  */
 trait StopFields
 {

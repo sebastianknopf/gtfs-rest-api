@@ -14,6 +14,7 @@ namespace App\Google\Transit\FareAttribute;
  * @property mixed $transfers TEXT
  * @property mixed $agency_id TEXT
  * @property mixed $transfer_duration INTEGER
+ * @property null|\App\Google\Transit\FareRule\FareRuleRecordSet $fare_rules
  */
 trait FareAttributeFields
 {

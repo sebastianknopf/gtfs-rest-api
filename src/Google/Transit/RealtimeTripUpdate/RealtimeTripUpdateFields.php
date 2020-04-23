@@ -14,6 +14,8 @@ namespace App\Google\Transit\RealtimeTripUpdate;
  * @property mixed $trip_start_time TEXT
  * @property mixed $vehicle_id TEXT
  * @property mixed $schedule_relationship TEXT
+ * @property null|\App\Google\Transit\RealtimeStopTimeUpdate\RealtimeStopTimeUpdateRecordSet $stop_time_updates
+ * @property null|false|\App\Google\Transit\RealtimeVehiclePosition\RealtimeVehiclePositionRecord $vehicle_position
  */
 trait RealtimeTripUpdateFields
 {
