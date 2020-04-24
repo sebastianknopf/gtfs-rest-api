@@ -33,6 +33,17 @@ class RealtimeTripUpdateTable extends Table
   'primary' => true,
   'options' => NULL,
 ),
+        'timestamp' => array (
+  'name' => 'timestamp',
+  'type' => 'INTEGER',
+  'size' => NULL,
+  'scale' => NULL,
+  'notnull' => false,
+  'default' => NULL,
+  'autoinc' => false,
+  'primary' => false,
+  'options' => NULL,
+),
         'trip_id' => array (
   'name' => 'trip_id',
   'type' => 'TEXT',
@@ -103,6 +114,7 @@ class RealtimeTripUpdateTable extends Table
 
     const COLUMN_NAMES = [
         'trip_update_id',
+        'timestamp',
         'trip_id',
         'route_id',
         'trip_start_date',
@@ -113,6 +125,7 @@ class RealtimeTripUpdateTable extends Table
 
     const COLUMN_DEFAULTS = [
         'trip_update_id' => null,
+        'timestamp' => null,
         'trip_id' => null,
         'route_id' => null,
         'trip_start_date' => null,

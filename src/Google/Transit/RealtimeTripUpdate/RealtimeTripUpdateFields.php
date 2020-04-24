@@ -8,6 +8,7 @@ namespace App\Google\Transit\RealtimeTripUpdate;
 
 /**
  * @property mixed $trip_update_id INTEGER NOT NULL
+ * @property mixed $timestamp INTEGER
  * @property mixed $trip_id TEXT
  * @property mixed $route_id TEXT
  * @property mixed $trip_start_date TEXT

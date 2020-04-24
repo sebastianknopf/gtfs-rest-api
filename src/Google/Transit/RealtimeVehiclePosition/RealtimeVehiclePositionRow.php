@@ -16,7 +16,11 @@ use Atlas\Table\Row;
  * @property mixed $position_lat REAL
  * @property mixed $position_lon REAL
  * @property mixed $position_bearing REAL
+ * @property mixed $position_odometer REAL
  * @property mixed $position_speed REAL
+ * @property mixed $congestion_level TEXT
+ * @property mixed $occupancy_status TEXT
+ * @property mixed $stop_status TEXT
  */
 class RealtimeVehiclePositionRow extends Row
 {
@@ -28,6 +32,10 @@ class RealtimeVehiclePositionRow extends Row
         'position_lat' => null,
         'position_lon' => null,
         'position_bearing' => null,
+        'position_odometer' => null,
         'position_speed' => null,
+        'congestion_level' => null,
+        'occupancy_status' => null,
+        'stop_status' => null,
     ];
 }

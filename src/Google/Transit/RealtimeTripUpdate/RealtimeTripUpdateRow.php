@@ -10,6 +10,7 @@ use Atlas\Table\Row;
 
 /**
  * @property mixed $trip_update_id INTEGER NOT NULL
+ * @property mixed $timestamp INTEGER
  * @property mixed $trip_id TEXT
  * @property mixed $route_id TEXT
  * @property mixed $trip_start_date TEXT
@@ -21,6 +22,7 @@ class RealtimeTripUpdateRow extends Row
 {
     protected $cols = [
         'trip_update_id' => null,
+        'timestamp' => null,
         'trip_id' => null,
         'route_id' => null,
         'trip_start_date' => null,

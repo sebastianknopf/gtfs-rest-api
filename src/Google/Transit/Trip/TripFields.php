@@ -23,6 +23,7 @@ namespace App\Google\Transit\Trip;
  * @property null|\App\Google\Transit\StopTime\StopTimeRecordSet $stop_times
  * @property null|\App\Google\Transit\Frequency\FrequencyRecordSet $frequencies
  * @property null|\App\Google\Transit\Shape\ShapeRecordSet $shape_points
+ * @property null|false|\App\Google\Transit\RealtimeTripUpdate\RealtimeTripUpdateRecord $trip_update
  */
 trait TripFields
 {

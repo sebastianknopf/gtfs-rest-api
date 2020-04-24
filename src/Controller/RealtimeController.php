@@ -32,8 +32,11 @@ class RealtimeController extends BaseController
     }
 
     /**
-     * @param ServerRequest $request
-     * @throws \Exception When the message could not be processed
+     * Receives a set of GTFS-realtime service alerts and adds them to the database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     * @throws \Exception
      */
     protected function postAlerts(ServerRequest $request) {
         $bodyPbf = $request->getBody()->getContents();
@@ -83,13 +86,18 @@ class RealtimeController extends BaseController
         }
 
         $this->orm->commit();
+
+        return [
+            'message' => 'alerts processed successfully'
+        ];
     }
 
     /**
+     * Receives a set of GTFS-realtime trip updates and adds them to the database.
      *
-     *
-     * @param ServerRequest $request
-     * @throws \Exception When the message could not be processed
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     * @throws \Exception
      */
     protected function postTripUpdates(ServerRequest $request) {
         $bodyPbf = $request->getBody()->getContents();
@@ -139,6 +147,7 @@ class RealtimeController extends BaseController
 
                 $tripUpdate = $this->orm->newRecord(RealtimeTripUpdate::class, [
                     'trip_id' => $tripUpdateMessage->getTrip()->getTripId(),
+                    'timestamp' => $tripUpdateMessage->getTimestamp(),
                     'route_id' => $tripUpdateMessage->getTrip()->getRouteId(),
                     'trip_start_date' => $tripUpdateMessage->getTrip()->getStartDate(),
                     'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime(),
@@ -152,11 +161,18 @@ class RealtimeController extends BaseController
         }
 
         $this->orm->commit();
+
+        return [
+            'message' => 'trip updates processed successfully'
+        ];
     }
 
     /**
-     * @param ServerRequest $request
-     * @throws \Exception When the message could not be processed
+     * Receives a set of GTFS-realtime vehicle positions and adds them to the database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     * @throws \Exception
      */
     protected function postVehiclePositions(ServerRequest $request) {
         $bodyPbf = $request->getBody()->getContents();
@@ -195,13 +211,41 @@ class RealtimeController extends BaseController
                     'position_lat' => $vehiclePositionMessage->getPosition()->getLatitude(),
                     'position_lon' => $vehiclePositionMessage->getPosition()->getLongitude(),
                     'position_bearing' => $vehiclePositionMessage->getPosition()->getBearing(),
-                    'position_speed' => $vehiclePositionMessage->getPosition()->getSpeed()
+                    'position_odometer' => $vehiclePositionMessage->getPosition()->getOdometer(),
+                    'position_speed' => $vehiclePositionMessage->getPosition()->getSpeed(),
+                    'congestion_level' => $vehiclePositionMessage->getCongestionLevel(),
+                    'occupancy_status' => $vehiclePositionMessage->getOccupancyStatus(),
+                    'stop_status' => $vehiclePositionMessage->getCurrentStatus()
                 ]);
 
                 $this->orm->insert($vehiclePosition);
+
+                // set vehicle ID to a trip update, if a trip descriptor is contained
+                if ($vehiclePositionMessage->getTrip() != null) {
+                    $tripDescriptor = [
+                        'trip_id' => $vehiclePositionMessage->getTrip()->getTripId(),
+                        'route_id' => $vehiclePositionMessage->getTrip()->getRouteId(),
+                        'trip_start_date' => $vehiclePositionMessage->getTrip()->getStartDate(),
+                        'trip_start_time' => $vehiclePositionMessage->getTrip()->getStartTime()
+                    ];
+
+                    $existingUpdate = $this->orm
+                        ->select(RealtimeTripUpdate::class)
+                        ->whereEquals($tripDescriptor)
+                        ->fetchRecord();
+
+                    if ($existingUpdate != null) {
+                        $existingUpdate->vehicle_id = $vehiclePositionMessage->getVehicle()->getId();
+                        $this->orm->update($existingUpdate);
+                    }
+                }
             }
         }
 
         $this->orm->commit();
+
+        return [
+            'message' => 'vehicle positions processed successfully'
+        ];
     }
 }
