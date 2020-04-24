@@ -38,6 +38,12 @@ class TripController extends BaseController
                     'agency'
                 ],'stop_times' => [
                     'stop'
+                ],
+                'trip_update' => [
+                    'stop_time_updates' => function ($select) {
+                        $select->orderBy('stop_sequence');
+                    },
+                    'vehicle_position'
                 ]
             ])
             ->join('LEFT', StopTimeTable::NAME, 'trips.trip_id = stop_times.trip_id')
@@ -78,11 +84,18 @@ class TripController extends BaseController
                 'frequencies',
                 'shape_points' => function ($select) {
                     $select->orderBy('shape_pt_sequence');
-                }
+                },
+                'trip_update' => [
+                    'stop_time_updates' => function ($select) {
+                        $select->orderBy('stop_sequence');
+                    },
+                    'vehicle_position'
+                ]
             ])
             ->where('trip_id = ', $requestTripId);
 
-        return [$query->fetchRecord()];
+        $result = $query->fetchRecord();
+        return $result != null ? [$result] : [];
     }
 
     /**
@@ -109,7 +122,13 @@ class TripController extends BaseController
                 ],
                 'stop_times' =>  function ($select) {
                     $select->with(['stop'])->orderBy('stop_sequence');
-                }
+                },
+                'trip_update' => [
+                    'stop_time_updates' => function ($select) {
+                        $select->orderBy('stop_sequence');
+                    },
+                    'vehicle_position'
+                ]
             ])
             ->join('LEFT', StopTimeTable::NAME, 'trips.trip_id = stop_times.trip_id')
             ->where('stop_times.stop_sequence =', '1')
@@ -156,7 +175,13 @@ class TripController extends BaseController
                 ],
                 'stop_times' =>  function ($select) {
                     $select->with(['stop'])->orderBy('stop_sequence');
-                }
+                },
+                'trip_update' => [
+                    'stop_time_updates' => function ($select) {
+                        $select->orderBy('stop_sequence');
+                    },
+                    'vehicle_position'
+                ]
             ])
             ->join('LEFT', StopTimeTable::NAME, 'trips.trip_id = stop_times.trip_id')
             ->where('stop_times.stop_sequence =', '1')
@@ -204,7 +229,13 @@ class TripController extends BaseController
            ],
            'stop_times' => function ($select) {
                 $select->with(['stop'])->orderBy('stop_sequence');
-            }
+           },
+            'trip_update' => [
+                'stop_time_updates' => function ($select) {
+                    $select->orderBy('stop_sequence');
+                },
+                'vehicle_position'
+            ]
         ])
         ->join('LEFT', StopTimeTable::NAME, 'trips.trip_id = stop_times.trip_id')
         ->where('stop_times.stop_id IN', $subordinateStopIds)
@@ -267,11 +298,18 @@ class TripController extends BaseController
                 'frequencies',
                 'shape_points' => function ($select) {
                     $select->orderBy('shape_pt_sequence');
-                }
+                },
+                'trip_update' => [
+                    'stop_time_updates' => function ($select) {
+                        $select->orderBy('stop_sequence');
+                    },
+                    'vehicle_position'
+                ]
             ])
             ->where('trip_id = ', $tripId);
 
-        return [$query->fetchRecord()];
+        $result = $query->fetchRecord();
+        return $result != null ? [$result] : [];
     }
 
     /**

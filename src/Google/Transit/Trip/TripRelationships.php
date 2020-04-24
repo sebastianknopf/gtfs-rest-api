@@ -12,6 +12,7 @@ namespace App\Google\Transit\Trip;
 
 use App\Google\Transit\Calendar\Calendar;
 use App\Google\Transit\Frequency\Frequency;
+use App\Google\Transit\RealtimeTripUpdate\RealtimeTripUpdate;
 use App\Google\Transit\Route\Route;
 use App\Google\Transit\Shape\Shape;
 use App\Google\Transit\StopTime\StopTime;
@@ -43,6 +44,10 @@ class TripRelationships extends NullableMapperRelationships
 
         $this->oneToMany('shape_points', Shape::class, [
             'shape_id' => 'shape_id'
+        ]);
+
+        $this->nullableOneToOne('trip_update', RealtimeTripUpdate::class, [
+            'trip_id' => 'trip_id'
         ]);
     }
 }
