@@ -22,6 +22,17 @@ class RealtimeAlertEntityTable extends Table
     const NAME = 'realtime_alert_entities';
 
     const COLUMNS = [
+        '_id' => array (
+  'name' => '_id',
+  'type' => 'INTEGER',
+  'size' => NULL,
+  'scale' => NULL,
+  'notnull' => true,
+  'default' => NULL,
+  'autoinc' => true,
+  'primary' => true,
+  'options' => NULL,
+),
         'alert_id' => array (
   'name' => 'alert_id',
   'type' => 'INTEGER',
@@ -113,6 +124,7 @@ class RealtimeAlertEntityTable extends Table
     ];
 
     const COLUMN_NAMES = [
+        '_id',
         'alert_id',
         'stop_id',
         'agency_id',
@@ -124,6 +136,7 @@ class RealtimeAlertEntityTable extends Table
     ];
 
     const COLUMN_DEFAULTS = [
+        '_id' => null,
         'alert_id' => null,
         'stop_id' => null,
         'agency_id' => null,
@@ -135,9 +148,10 @@ class RealtimeAlertEntityTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        '_id',
     ];
 
-    const AUTOINC_COLUMN = null;
+    const AUTOINC_COLUMN = '_id';
 
     const AUTOINC_SEQUENCE = null;
 }

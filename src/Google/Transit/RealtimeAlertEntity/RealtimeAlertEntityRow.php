@@ -9,6 +9,7 @@ namespace App\Google\Transit\RealtimeAlertEntity;
 use Atlas\Table\Row;
 
 /**
+ * @property mixed $_id INTEGER NOT NULL
  * @property mixed $alert_id INTEGER NOT NULL
  * @property mixed $stop_id TEXT
  * @property mixed $agency_id TEXT
@@ -21,6 +22,7 @@ use Atlas\Table\Row;
 class RealtimeAlertEntityRow extends Row
 {
     protected $cols = [
+        '_id' => null,
         'alert_id' => null,
         'stop_id' => null,
         'agency_id' => null,

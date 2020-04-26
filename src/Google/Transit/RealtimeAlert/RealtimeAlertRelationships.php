@@ -13,10 +13,10 @@ class RealtimeAlertRelationships extends MapperRelationships
     {
         $this->oneToMany('time_ranges', RealtimeAlertTimerange::class, [
             'alert_id' => 'alert_id'
-        ]);
+        ])->onDeleteSetDelete();
 
         $this->oneToMany('informed_entities', RealtimeAlertEntity::class, [
             'alert_id' => 'alert_id'
-        ]);
+        ])->onDeleteSetDelete();
     }
 }

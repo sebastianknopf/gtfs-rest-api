@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace App\Google\Transit\RealtimeAlertTimerange;
 
 /**
+ * @property mixed $_id INTEGER NOT NULL
  * @property mixed $alert_id INTEGER NOT NULL
  * @property mixed $start_time INTEGER
  * @property mixed $end_time INTEGER

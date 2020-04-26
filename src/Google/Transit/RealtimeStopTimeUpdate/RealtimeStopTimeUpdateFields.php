@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace App\Google\Transit\RealtimeStopTimeUpdate;
 
 /**
+ * @property mixed $_id INTEGER NOT NULL
  * @property mixed $trip_update_id INTEGER
  * @property mixed $stop_id TEXT
  * @property mixed $stop_sequence INTEGER

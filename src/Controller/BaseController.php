@@ -62,6 +62,7 @@ abstract class BaseController {
         $selector = isset($args['selector']) ? $args['selector'] : self::$DEFAULT_SELECTOR;
         $selectorMethod = 'find' . $selector;
         $postMethod = 'post' . $selector;
+        $deleteMethod = 'delete' . $selector;
 
         if (method_exists($this, $selectorMethod) && $request->isGet()) {
             $this->requestLimit = $request->getParam('limit', 100);
@@ -71,6 +72,11 @@ abstract class BaseController {
             $response = $response->withJson($result);
         } elseif (method_exists($this, $postMethod) && $request->isPost()) {
             $result = $this->$postMethod($request);
+            $response = $response->withJson([
+                'result' => $result
+            ]);
+        } elseif (method_exists($this, $deleteMethod) && $request->isDelete()) {
+            $result = $this->$deleteMethod($request);
             $response = $response->withJson([
                 'result' => $result
             ]);

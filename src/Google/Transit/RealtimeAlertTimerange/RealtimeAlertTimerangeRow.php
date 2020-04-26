@@ -9,6 +9,7 @@ namespace App\Google\Transit\RealtimeAlertTimerange;
 use Atlas\Table\Row;
 
 /**
+ * @property mixed $_id INTEGER NOT NULL
  * @property mixed $alert_id INTEGER NOT NULL
  * @property mixed $start_time INTEGER
  * @property mixed $end_time INTEGER
@@ -16,6 +17,7 @@ use Atlas\Table\Row;
 class RealtimeAlertTimerangeRow extends Row
 {
     protected $cols = [
+        '_id' => null,
         'alert_id' => null,
         'start_time' => null,
         'end_time' => null,

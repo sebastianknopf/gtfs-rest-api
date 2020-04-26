@@ -22,6 +22,17 @@ class RealtimeAlertTimerangeTable extends Table
     const NAME = 'realtime_alert_timeranges';
 
     const COLUMNS = [
+        '_id' => array (
+  'name' => '_id',
+  'type' => 'INTEGER',
+  'size' => NULL,
+  'scale' => NULL,
+  'notnull' => true,
+  'default' => NULL,
+  'autoinc' => true,
+  'primary' => true,
+  'options' => NULL,
+),
         'alert_id' => array (
   'name' => 'alert_id',
   'type' => 'INTEGER',
@@ -58,21 +69,24 @@ class RealtimeAlertTimerangeTable extends Table
     ];
 
     const COLUMN_NAMES = [
+        '_id',
         'alert_id',
         'start_time',
         'end_time',
     ];
 
     const COLUMN_DEFAULTS = [
+        '_id' => null,
         'alert_id' => null,
         'start_time' => null,
         'end_time' => null,
     ];
 
     const PRIMARY_KEY = [
+        '_id',
     ];
 
-    const AUTOINC_COLUMN = null;
+    const AUTOINC_COLUMN = '_id';
 
     const AUTOINC_SEQUENCE = null;
 }

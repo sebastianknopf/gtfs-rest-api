@@ -22,6 +22,17 @@ class RealtimeStopTimeUpdateTable extends Table
     const NAME = 'realtime_stop_time_updates';
 
     const COLUMNS = [
+        '_id' => array (
+  'name' => '_id',
+  'type' => 'INTEGER',
+  'size' => NULL,
+  'scale' => NULL,
+  'notnull' => true,
+  'default' => NULL,
+  'autoinc' => true,
+  'primary' => true,
+  'options' => NULL,
+),
         'trip_update_id' => array (
   'name' => 'trip_update_id',
   'type' => 'INTEGER',
@@ -135,6 +146,7 @@ class RealtimeStopTimeUpdateTable extends Table
     ];
 
     const COLUMN_NAMES = [
+        '_id',
         'trip_update_id',
         'stop_id',
         'stop_sequence',
@@ -148,6 +160,7 @@ class RealtimeStopTimeUpdateTable extends Table
     ];
 
     const COLUMN_DEFAULTS = [
+        '_id' => null,
         'trip_update_id' => null,
         'stop_id' => null,
         'stop_sequence' => null,
@@ -161,9 +174,10 @@ class RealtimeStopTimeUpdateTable extends Table
     ];
 
     const PRIMARY_KEY = [
+        '_id',
     ];
 
-    const AUTOINC_COLUMN = null;
+    const AUTOINC_COLUMN = '_id';
 
     const AUTOINC_SEQUENCE = null;
 }

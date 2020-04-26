@@ -93,6 +93,35 @@ class RealtimeController extends BaseController
     }
 
     /**
+     * Deletes matching GTFS-realtime service alerts from database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     */
+    protected function deleteAlerts(ServerRequest $request) {
+        $requestAlertId = $request->getParam('alertId', null);
+
+        if ($requestAlertId == null) {
+            throw new \RuntimeException('missing parameter alertId!');
+        }
+
+        $existingAlert = $this->orm
+            ->select(RealtimeAlert::class)
+            ->with(['time_ranges', 'informed_entities'])
+            ->whereEquals(['alert_id' => $requestAlertId])
+            ->fetchRecordSet();
+
+        if ($existingAlert != null) {
+            $existingAlert->setDelete();
+            $this->orm->persistRecordSet($existingAlert);
+        }
+
+        return [
+            'message' => 'alert has been deleted successfully'
+        ];
+    }
+
+    /**
      * Receives a set of GTFS-realtime trip updates and adds them to the database.
      *
      * @param ServerRequest $request The server request instance
@@ -111,25 +140,6 @@ class RealtimeController extends BaseController
             if ($feedEntity->getTripUpdate() != null) {
                 $tripUpdateMessage = $feedEntity->getTripUpdate();
 
-                // delete existing trip update from database
-                $tripDescriptor = [
-                    'trip_id' => $tripUpdateMessage->getTrip()->getTripId(),
-                    'route_id' => $tripUpdateMessage->getTrip()->getRouteId(),
-                    'trip_start_date' => $tripUpdateMessage->getTrip()->getStartDate(),
-                    'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime()
-                ];
-
-                $existingUpdate = $this->orm
-                    ->select(RealtimeTripUpdate::class)
-                    ->whereEquals($tripDescriptor)
-                    ->fetchRecord();
-
-                if ($existingUpdate != null) {
-                    $this->orm->delete($existingUpdate);
-                    $this->orm->persist($existingUpdate);
-                }
-
-                // build new trip update
                 $stopTimeUpdates = $this->orm->newRecordSet(RealtimeStopTimeUpdate::class);
                 foreach ($tripUpdateMessage->getStopTimeUpdate() as $stopTimeUpdate) {
                     $stopTimeUpdates->appendNew([
@@ -145,18 +155,46 @@ class RealtimeController extends BaseController
                     ]);
                 }
 
-                $tripUpdate = $this->orm->newRecord(RealtimeTripUpdate::class, [
+                // find existing trip update and override this
+                $tripDescriptor = [
                     'trip_id' => $tripUpdateMessage->getTrip()->getTripId(),
-                    'timestamp' => $tripUpdateMessage->getTimestamp(),
                     'route_id' => $tripUpdateMessage->getTrip()->getRouteId(),
                     'trip_start_date' => $tripUpdateMessage->getTrip()->getStartDate(),
-                    'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime(),
-                    'schedule_relationship' => $tripUpdateMessage->getTrip()->getScheduleRelationship(),
-                    'vehicle_id' => $tripUpdateMessage->getVehicle() != null ? $tripUpdateMessage->getVehicle()->getId() : null,
-                    'stop_time_updates' => $stopTimeUpdates
-                ]);
+                    'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime()
+                ];
 
-                $this->orm->persist($tripUpdate);
+                $existingUpdate = $this->orm
+                    ->select(RealtimeTripUpdate::class)
+                    ->whereEquals($tripDescriptor)
+                    ->fetchRecord();
+
+                if ($existingUpdate != null) {
+                    $existingStopTimeUpdates = $this->orm
+                        ->select(RealtimeStopTimeUpdate::class)
+                        ->where('trip_update_id =', $existingUpdate->trip_update_id)
+                        ->fetchRecordSet();
+
+                    $existingStopTimeUpdates->setDelete();
+                    $this->orm->persistRecordSet($existingStopTimeUpdates);
+
+                    $existingUpdate->timestamp = $tripUpdateMessage->getTimestamp();
+                    $existingUpdate->schedule_relationship = $tripUpdateMessage->getTrip()->getScheduleRelationship();
+                    $existingUpdate->stop_time_updates = $stopTimeUpdates;
+
+                    $this->orm->persist($existingUpdate);
+                } else {
+                    $tripUpdate = $this->orm->newRecord(RealtimeTripUpdate::class, [
+                        'trip_id' => $tripUpdateMessage->getTrip()->getTripId(),
+                        'timestamp' => $tripUpdateMessage->getTimestamp(),
+                        'route_id' => $tripUpdateMessage->getTrip()->getRouteId(),
+                        'trip_start_date' => $tripUpdateMessage->getTrip()->getStartDate(),
+                        'trip_start_time' => $tripUpdateMessage->getTrip()->getStartTime(),
+                        'schedule_relationship' => $tripUpdateMessage->getTrip()->getScheduleRelationship(),
+                        'stop_time_updates' => $stopTimeUpdates
+                    ]);
+
+                    $this->orm->persist($tripUpdate);
+                }
             }
         }
 
@@ -164,6 +202,52 @@ class RealtimeController extends BaseController
 
         return [
             'message' => 'trip updates processed successfully'
+        ];
+    }
+
+    /**
+     * Deletes matching GTFS-realtime trip updates from database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     */
+    protected function deleteTripUpdates(ServerRequest $request) {
+        $requestTripId = $request->getParam('tripId', null);
+        $requestRouteId = $request->getParam('routeId', null);
+
+        if ($requestTripId == null) {
+            throw new \RuntimeException('missing parameter tripId!');
+        }
+
+        if ($requestRouteId == null) {
+            throw new \RuntimeException('missing parameter routeId!');
+        }
+
+        $requestTripStartDate = $request->getParam('tripStartDate', null);
+        $requestTripStartTime = $request->getParam('tripStartTime', null);
+
+        // delete existing trip update from database
+        $tripDescriptor = [
+            'trip_id' => $requestTripId,
+            'route_id' => $requestRouteId
+        ];
+
+        if ($requestTripStartDate != null) $tripDescriptor['trip_start_date'] = $requestTripStartDate;
+        if ($requestTripStartTime != null) $tripDescriptor['trip_start_time'] = $requestTripStartTime;
+
+        $existingUpdates = $this->orm
+            ->select(RealtimeTripUpdate::class)
+            ->with(['stop_time_updates'])
+            ->whereEquals($tripDescriptor)
+            ->fetchRecordSet();
+
+        if ($existingUpdates != null) {
+            $existingUpdates->setDelete();
+            $this->orm->persistRecordSet($existingUpdates);
+        }
+
+        return [
+            'message' => 'trip updates deleted successfully'
         ];
     }
 
@@ -186,7 +270,7 @@ class RealtimeController extends BaseController
             if ($feedEntity->getVehicle() != null) {
                 $vehiclePositionMessage = $feedEntity->getVehicle();
 
-                // delete existing vehicle position from database
+                // find existing vehicle position and override this
                 $vehicleDescriptor = [
                     'vehicle_id' => $vehiclePositionMessage->getVehicle()->getId(),
                     'vehicle_label' => $vehiclePositionMessage->getVehicle()->getLabel(),
@@ -199,26 +283,35 @@ class RealtimeController extends BaseController
                     ->fetchRecord();
 
                 if ($existingPosition != null) {
-                    $this->orm->delete($existingPosition);
+                    $existingPosition->timestamp = $vehiclePositionMessage->getTimestamp();
+                    $existingPosition->position_lat = $vehiclePositionMessage->getPosition()->getLatitude();
+                    $existingPosition->position_lon = $vehiclePositionMessage->getPosition()->getLongitude();
+                    $existingPosition->position_bearing = $vehiclePositionMessage->getPosition()->getBearing();
+                    $existingPosition->position_odometer = $vehiclePositionMessage->getPosition()->getOdometer();
+                    $existingPosition->position_speed = $vehiclePositionMessage->getPosition()->getSpeed();
+                    $existingPosition->congestion_level = $vehiclePositionMessage->getCongestionLevel();
+                    $existingPosition->occupancy_status = $vehiclePositionMessage->getOccupancyStatus();
+                    $existingPosition->stop_status = $vehiclePositionMessage->getCurrentStatus();
+
+                    $this->orm->update($existingPosition);
+                } else {
+                    $vehiclePosition = $this->orm->newRecord(RealtimeVehiclePosition::class, [
+                        'vehicle_id' => $vehiclePositionMessage->getVehicle()->getId(),
+                        'timestamp' => $vehiclePositionMessage->getTimestamp(),
+                        'vehicle_label' => $vehiclePositionMessage->getVehicle()->getLabel(),
+                        'vehicle_license_plate' => $vehiclePositionMessage->getVehicle()->getLicensePlate(),
+                        'position_lat' => $vehiclePositionMessage->getPosition()->getLatitude(),
+                        'position_lon' => $vehiclePositionMessage->getPosition()->getLongitude(),
+                        'position_bearing' => $vehiclePositionMessage->getPosition()->getBearing(),
+                        'position_odometer' => $vehiclePositionMessage->getPosition()->getOdometer(),
+                        'position_speed' => $vehiclePositionMessage->getPosition()->getSpeed(),
+                        'congestion_level' => $vehiclePositionMessage->getCongestionLevel(),
+                        'occupancy_status' => $vehiclePositionMessage->getOccupancyStatus(),
+                        'stop_status' => $vehiclePositionMessage->getCurrentStatus()
+                    ]);
+
+                    $this->orm->insert($vehiclePosition);
                 }
-
-                // build new vehicle position
-                $vehiclePosition = $this->orm->newRecord(RealtimeVehiclePosition::class, [
-                    'vehicle_id' => $vehiclePositionMessage->getVehicle()->getId(),
-                    'timestamp' => $vehiclePositionMessage->getTimestamp(),
-                    'vehicle_label' => $vehiclePositionMessage->getVehicle()->getLabel(),
-                    'vehicle_license_plate' => $vehiclePositionMessage->getVehicle()->getLicensePlate(),
-                    'position_lat' => $vehiclePositionMessage->getPosition()->getLatitude(),
-                    'position_lon' => $vehiclePositionMessage->getPosition()->getLongitude(),
-                    'position_bearing' => $vehiclePositionMessage->getPosition()->getBearing(),
-                    'position_odometer' => $vehiclePositionMessage->getPosition()->getOdometer(),
-                    'position_speed' => $vehiclePositionMessage->getPosition()->getSpeed(),
-                    'congestion_level' => $vehiclePositionMessage->getCongestionLevel(),
-                    'occupancy_status' => $vehiclePositionMessage->getOccupancyStatus(),
-                    'stop_status' => $vehiclePositionMessage->getCurrentStatus()
-                ]);
-
-                $this->orm->insert($vehiclePosition);
 
                 // set vehicle ID to a trip update, if a trip descriptor is contained
                 if ($vehiclePositionMessage->getTrip() != null) {
@@ -246,6 +339,45 @@ class RealtimeController extends BaseController
 
         return [
             'message' => 'vehicle positions processed successfully'
+        ];
+    }
+
+    /**
+     * Deletes matching GTFS-realtime vehicle positions from database.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     */
+    public function deleteVehiclePositions(ServerRequest $request) {
+        $requestVehicleId = $request->getParam('vehicleId', null);
+
+        $requestVehicleLabel = $request->getParam('vehicleLabel', null);
+        $requestVehicleLicensePlate = $request->getParam('vehicleLicensePlate', null);
+
+        if ($requestVehicleId == null) {
+            throw new \RuntimeException('missing parameter vehicleId!');
+        }
+
+        // delete existing trip update from database
+        $vehicleDescriptor = [
+            'vehicle_id' => $requestVehicleId
+        ];
+
+        if ($requestVehicleLabel != null) $vehicleDescriptor['vehicle_label'] = $requestVehicleLabel;
+        if ($requestVehicleLicensePlate != null) $vehicleDescriptor['vehicle_license_plate'] = $requestVehicleLicensePlate;
+
+        $existingPositions = $this->orm
+            ->select(RealtimeVehiclePosition::class)
+            ->whereEquals($vehicleDescriptor)
+            ->fetchRecordSet();
+
+        if ($existingPositions != null) {
+            $existingPositions->setDelete();
+            $this->orm->persistRecordSet($existingPositions);
+        }
+
+        return [
+            'message' => 'vehicle positions deleted successfully'
         ];
     }
 }

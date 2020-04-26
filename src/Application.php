@@ -61,6 +61,7 @@ $app->addErrorMiddleware(
 $app->group('/api/v1', function (RouteCollectorProxy $group) {
     $group->get('/{resource}/[{selector}]', ControllerDispatcher::class);
     $group->post('/{resource}/{selector}', ControllerDispatcher::class);
+    $group->delete('/{resource}/{selector}', ControllerDispatcher::class);
 });
 
 // run application

@@ -9,6 +9,7 @@ namespace App\Google\Transit\RealtimeStopTimeUpdate;
 use Atlas\Table\Row;
 
 /**
+ * @property mixed $_id INTEGER NOT NULL
  * @property mixed $trip_update_id INTEGER
  * @property mixed $stop_id TEXT
  * @property mixed $stop_sequence INTEGER
@@ -23,6 +24,7 @@ use Atlas\Table\Row;
 class RealtimeStopTimeUpdateRow extends Row
 {
     protected $cols = [
+        '_id' => null,
         'trip_update_id' => null,
         'stop_id' => null,
         'stop_sequence' => null,
