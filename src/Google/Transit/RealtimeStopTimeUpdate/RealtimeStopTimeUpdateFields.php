@@ -14,7 +14,7 @@ namespace App\Google\Transit\RealtimeStopTimeUpdate;
  * @property mixed $arrival_delay INTEGER
  * @property mixed $arrival_time INTEGER
  * @property mixed $arrival_uncertainty INTEGER
- * @property mixed $depature_delay INTEGER
+ * @property mixed $departure_delay INTEGER
  * @property mixed $departure_time INTEGER
  * @property mixed $departure_uncertainty INTEGER
  * @property mixed $schedule_relationship TEXT

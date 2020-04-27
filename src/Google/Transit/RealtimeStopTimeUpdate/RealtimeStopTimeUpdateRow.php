@@ -16,7 +16,7 @@ use Atlas\Table\Row;
  * @property mixed $arrival_delay INTEGER
  * @property mixed $arrival_time INTEGER
  * @property mixed $arrival_uncertainty INTEGER
- * @property mixed $depature_delay INTEGER
+ * @property mixed $departure_delay INTEGER
  * @property mixed $departure_time INTEGER
  * @property mixed $departure_uncertainty INTEGER
  * @property mixed $schedule_relationship TEXT
@@ -31,7 +31,7 @@ class RealtimeStopTimeUpdateRow extends Row
         'arrival_delay' => null,
         'arrival_time' => null,
         'arrival_uncertainty' => null,
-        'depature_delay' => null,
+        'departure_delay' => null,
         'departure_time' => null,
         'departure_uncertainty' => null,
         'schedule_relationship' => null,

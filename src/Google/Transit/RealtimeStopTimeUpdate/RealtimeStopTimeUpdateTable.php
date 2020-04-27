@@ -99,8 +99,8 @@ class RealtimeStopTimeUpdateTable extends Table
   'primary' => false,
   'options' => NULL,
 ),
-        'depature_delay' => array (
-  'name' => 'depature_delay',
+        'departure_delay' => array (
+  'name' => 'departure_delay',
   'type' => 'INTEGER',
   'size' => NULL,
   'scale' => NULL,
@@ -153,7 +153,7 @@ class RealtimeStopTimeUpdateTable extends Table
         'arrival_delay',
         'arrival_time',
         'arrival_uncertainty',
-        'depature_delay',
+        'departure_delay',
         'departure_time',
         'departure_uncertainty',
         'schedule_relationship',
@@ -167,7 +167,7 @@ class RealtimeStopTimeUpdateTable extends Table
         'arrival_delay' => null,
         'arrival_time' => null,
         'arrival_uncertainty' => null,
-        'depature_delay' => null,
+        'departure_delay' => null,
         'departure_time' => null,
         'departure_uncertainty' => null,
         'schedule_relationship' => null,
