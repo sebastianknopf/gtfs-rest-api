@@ -25,7 +25,7 @@ class AttributionController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with all fares
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         $query = $this->orm
             ->select(Attribution::class)
             ->limit($this->requestLimit)
@@ -40,7 +40,7 @@ class AttributionController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching attribution object(s)
      */
-    protected function findByAgencyId(ServerRequest $request) {
+    protected function getByAgencyId(ServerRequest $request) {
         $requestAgencyId = $request->getParam('agencyId', null);
 
         if ($requestAgencyId == null) {
@@ -62,7 +62,7 @@ class AttributionController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching attribution object(s)
      */
-    protected function findByRouteId(ServerRequest $request) {
+    protected function getByRouteId(ServerRequest $request) {
         $requestRouteId = $request->getParam('routeId', null);
 
         if ($requestRouteId == null) {
@@ -84,7 +84,7 @@ class AttributionController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching attribution object(s)
      */
-    protected function findByTripId(ServerRequest $request) {
+    protected function getByTripId(ServerRequest $request) {
         $requestTripId = $request->getParam('tripId', null);
 
         if ($requestTripId == null) {

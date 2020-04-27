@@ -26,11 +26,11 @@ class JourneyController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with all fares
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         throw new \RuntimeException('invalid selector method for trip queries!');
     }
 
-    protected function findByStopIds(ServerRequest $request) {
+    protected function getByStopIds(ServerRequest $request) {
         $requestOriginStopId = $request->getParam('originStopId', null);
         $requestDestinationStopId = $request->getParam('destinationStopId', null);
         $requestDate = $request->getParam('date', null);

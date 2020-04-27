@@ -30,7 +30,7 @@ class TripController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with all trips
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         $query = $this->orm
             ->select(Trip::class)
             ->with([
@@ -62,7 +62,7 @@ class TripController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching trip object(s)
      */
-    protected function findByTripId(ServerRequest $request) {
+    protected function getByTripId(ServerRequest $request) {
         $requestTripId = $request->getParam('tripId', null);
 
         if ($requestTripId == null) {
@@ -104,7 +104,7 @@ class TripController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching trip object(s)
      */
-    protected function findByRouteId(ServerRequest $request) {
+    protected function getByRouteId(ServerRequest $request) {
         $requestRouteId = $request->getParam('routeId', null);
 
         $requestDate = $request->getParam('date', null);
@@ -157,7 +157,7 @@ class TripController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching trip object(s)
      */
-    protected function findByBlockId(ServerRequest $request) {
+    protected function getByBlockId(ServerRequest $request) {
         $requestBlockId = $request->getParam('blockId', null);
 
         $requestDate = $request->getParam('date', null);
@@ -210,7 +210,7 @@ class TripController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching trip object(s)
      */
-    protected function findByStopId(ServerRequest $request) {
+    protected function getByStopId(ServerRequest $request) {
         $requestStopId = $request->getParam('stopId', null);
 
         $requestDate = $request->getParam('date', null);
@@ -264,7 +264,7 @@ class TripController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching trip object(s)
      */
-    protected function findByVehicleId(ServerRequest $request) {
+    protected function getByVehicleId(ServerRequest $request) {
         $requestVehicleId = $request->getParam('vehicleId', null);
 
         if ($requestVehicleId == null) {

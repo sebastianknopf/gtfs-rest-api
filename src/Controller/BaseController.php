@@ -60,7 +60,7 @@ abstract class BaseController {
      */
     public function __invoke(ServerRequest $request, Response $response, $args) {
         $selector = isset($args['selector']) ? $args['selector'] : self::$DEFAULT_SELECTOR;
-        $selectorMethod = 'find' . $selector;
+        $selectorMethod = 'get' . $selector;
         $postMethod = 'post' . $selector;
         $deleteMethod = 'delete' . $selector;
 
@@ -127,6 +127,6 @@ abstract class BaseController {
      * @param ServerRequest $request The server request instance
      * @return mixed Selector result data
      */
-    protected abstract function findAll(ServerRequest $request);
+    protected abstract function getAll(ServerRequest $request);
 
 }

@@ -25,7 +25,7 @@ class RouteController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with all routes
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         $query = $this->orm
             ->select(Route::class)
             ->with([
@@ -61,7 +61,7 @@ class RouteController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching route object(s)
      */
-    protected function findByRouteId(ServerRequest $request) {
+    protected function getByRouteId(ServerRequest $request) {
         $requestRouteId = $request->getParam('routeId', null);
 
         if ($requestRouteId == null) {
@@ -84,7 +84,7 @@ class RouteController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching route object(s)
      */
-    protected function findByRouteName(ServerRequest $request) {
+    protected function getByRouteName(ServerRequest $request) {
         $requestRouteName = $request->getParam('routeName', null);
 
         if ($requestRouteName == null) {

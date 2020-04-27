@@ -26,7 +26,7 @@ class FareController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with all fares
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         $query = $this->orm
             ->select(FareAttribute::class)
             ->with(['fare_rules'])
@@ -42,7 +42,7 @@ class FareController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching fare object(s)
      */
-    protected function findByFareId(ServerRequest $request) {
+    protected function getByFareId(ServerRequest $request) {
         $requestFareId = $request->getParam('fareId', null);
 
         if ($requestFareId == null) {
@@ -65,7 +65,7 @@ class FareController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching fare object(s)
      */
-    protected function findByZoneId(ServerRequest $request) {
+    protected function getByZoneId(ServerRequest $request) {
         $requestOriginId = $request->getParam('originZoneId', null);
         $requestDestinationId = $request->getParam('destinationZoneId', null);
 
@@ -113,7 +113,7 @@ class FareController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching fare object(s)
      */
-    protected function findByRouteId(ServerRequest $request) {
+    protected function getByRouteId(ServerRequest $request) {
         $requestRouteId = $request->getParam('routeId', null);
 
         $requestAgencyId = $request->getParam('agencyId');

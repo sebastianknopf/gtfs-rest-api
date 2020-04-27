@@ -27,7 +27,7 @@ class RealtimeController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Selector result data
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         throw new \RuntimeException('invalid selector method for trip queries!');
     }
 

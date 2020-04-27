@@ -25,7 +25,7 @@ class StopController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with all stops
      */
-    protected function findAll(ServerRequest $request) {
+    protected function getAll(ServerRequest $request) {
         $requestOffset = $request->getParam('offset', 0);
 
         $query = $this->orm
@@ -49,7 +49,7 @@ class StopController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching stop object(s)
      */
-    protected function findByStopId(ServerRequest $request) {
+    protected function getByStopId(ServerRequest $request) {
         $requestStopId = $request->getParam('stopId', null);
 
         if ($requestStopId == null) {
@@ -83,7 +83,7 @@ class StopController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching stop object(s)
      */
-    protected function findByLatLon(ServerRequest $request) {
+    protected function getByLatLon(ServerRequest $request) {
         $requestStopLat = $request->getParam('stopLat', 0);
         $requestStopLon = $request->getParam('stopLon', 0);
 
@@ -123,7 +123,7 @@ class StopController extends BaseController
      * @param ServerRequest $request The server request instance
      * @return mixed Array with matching stop object(s)
      */
-    protected function findByStopName(ServerRequest $request) {
+    protected function getByStopName(ServerRequest $request) {
         $requestStopName = $request->getParam('stopName', null);
 
         if ($requestStopName == null) {
