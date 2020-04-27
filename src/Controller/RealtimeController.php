@@ -380,4 +380,37 @@ class RealtimeController extends BaseController
             'message' => 'vehicle positions deleted successfully'
         ];
     }
+
+    /**
+     * Deletes all vehicle positions and trip updates which are updated last time before a certain offset of time
+     * in seconds. Default offset is -5min.
+     *
+     * @param ServerRequest $request The server request instance
+     * @return array A message for the API client
+     */
+    protected function deleteGarbageCollector(ServerRequest $request) {
+        $requestTimeOffset = $request->getParam('timeOffset', time() - strtotime('-5 minutes'));
+        $requestTimeOffset = time() - $requestTimeOffset;
+
+        $tripUpdates = $this->orm
+            ->select(RealtimeTripUpdate::class)
+            ->with(['stop_time_updates'])
+            ->where('timestamp <', $requestTimeOffset)
+            ->fetchRecordSet();
+
+        $tripUpdates->setDelete();
+        $this->orm->persistRecordSet($tripUpdates);
+
+        $vehiclePositions = $this->orm
+            ->select(RealtimeVehiclePosition::class)
+            ->where('timestamp <', $requestTimeOffset)
+            ->fetchRecordSet();
+
+        $vehiclePositions->setDelete();
+        $this->orm->persistRecordSet($vehiclePositions);
+
+        return [
+            'message' => 'garbage objects deleted successfully'
+        ];
+    }
 }
