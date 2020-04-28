@@ -392,6 +392,28 @@ class RealtimeController extends BaseController
         $requestTimeOffset = $request->getParam('timeOffset', time() - strtotime('-5 minutes'));
         $requestTimeOffset = time() - $requestTimeOffset;
 
+        // alerts
+        $alerts = $this->orm
+            ->select(RealtimeAlert::class)
+            ->with(['time_ranges'])
+            ->fetchRecordSet();
+
+        foreach ($alerts as $alert) {
+            $deleteFlag = true;
+            foreach ($alert->time_ranges as $timeRange) {
+                if ($timeRange->end_time > $requestTimeOffset || $timeRange->end_time == 0) {
+                    $deleteFlag = false;
+                    break;
+                }
+            }
+
+            if ($deleteFlag) {
+                $alert->setDelete();
+                $this->orm->persist($alert);
+            }
+        }
+
+        // trip updates
         $tripUpdates = $this->orm
             ->select(RealtimeTripUpdate::class)
             ->with(['stop_time_updates'])
@@ -401,6 +423,7 @@ class RealtimeController extends BaseController
         $tripUpdates->setDelete();
         $this->orm->persistRecordSet($tripUpdates);
 
+        // vehicle positions
         $vehiclePositions = $this->orm
             ->select(RealtimeVehiclePosition::class)
             ->where('timestamp <', $requestTimeOffset)
