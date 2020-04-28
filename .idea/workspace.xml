@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cc72ba92-0361-4f61-8144-6a3f59777dce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AttributionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AttributionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FareController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/JourneyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JourneyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RealtimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RealtimeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RouteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TripController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TripController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,32 +39,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2023">
-              <caret line="131" column="54" selection-start-line="131" selection-start-column="54" selection-end-line="131" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1318">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
-              <folding>
-                <element signature="e#187#204#0#PHP" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="229">
+                <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -156,8 +132,6 @@
         <option value="$PROJECT_DIR$/src/Mapper/Relationship/NullableOneToMany.php" />
         <option value="$PROJECT_DIR$/src/Mapper/NullableMapperRelationships.php" />
         <option value="$PROJECT_DIR$/src/Controller/RouteController.php" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/src/Controller/QueryController.php" />
         <option value="$PROJECT_DIR$/src/Controller/JourneyController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -172,10 +146,12 @@
         <option value="$PROJECT_DIR$/src/Controller/TripController.php" />
         <option value="$PROJECT_DIR$/src/Application.php" />
         <option value="$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRelationships.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/src/Controller/RealtimeController.php" />
         <option value="$PROJECT_DIR$/src/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Controller/FareController.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -221,10 +197,58 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Google" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Google" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Transit" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gtfs-rest-api" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\XAMPP\htdocs\gtfs-rest-api" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Google" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Transit" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="RealtimeAlert" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,108 +272,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-              <item name="RealtimeAlert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-              <item name="RealtimeTripUpdate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-              <item name="Realtime" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gtfs-rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gtfs-rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="gtfs" type="462c0819:PsiDirectoryNode" />
-              <item name="realtime-php" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-              <item name="Transit" type="462c0819:PsiDirectoryNode" />
-              <item name="Realtime" type="462c0819:PsiDirectoryNode" />
-              <item name="TripUpdate" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -410,6 +336,7 @@
       <workItem from="1587446702306" duration="30394000" />
       <workItem from="1587733877567" duration="11987000" />
       <workItem from="1587881737665" duration="2051000" />
+      <workItem from="1587973650861" duration="2087000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1585647756764</created>
@@ -642,11 +569,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587928245831</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="renamed all finder methods with 'get' prefix according to the request method name">
+      <created>1587973700504</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1587973700504</updated>
+    </task>
+    <task id="LOCAL-00035" summary="bug fixed in database column name">
+      <created>1587977560297</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1587977560297</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159509000" />
+    <option name="totallyTimeSpent" value="165219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -661,7 +602,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20575693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21002132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -674,7 +615,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733475" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733475" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -687,8 +628,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improved ordering of stop times and shapes loading" />
-    <MESSAGE value="re-generated model files for type safety and added config file" />
     <MESSAGE value="intended ControllerDispatcher class for simplifying the invention of new controller classes" />
     <MESSAGE value="implemented basic fare support" />
     <MESSAGE value="moved global constants definition into config folder" />
@@ -712,37 +651,19 @@
     <MESSAGE value="included realtime data into standard API responses, updated relationships" />
     <MESSAGE value="added support for vehicle/trip resolution and missing fields in database models" />
     <MESSAGE value="updated SQLite data types and database models" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated SQLite data types and database models" />
+    <MESSAGE value="renamed all finder methods with 'get' prefix according to the request method name" />
+    <MESSAGE value="bug fixed in database column name" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed in database column name" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Controller/RouteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="130" column="56" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
+        <state relative-caret-position="17">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="34" selection-end-column="43" />
           <folding>
             <element signature="e#187#222#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="638">
-            <caret line="148" column="29" lean-forward="true" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1025,13 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Google/Transit/RealtimeAlert/RealtimeAlertRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1067,9 +981,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="758">
+          <caret line="425" column="28" selection-start-line="425" selection-start-column="28" selection-end-line="425" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#187#238#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
+        <state relative-caret-position="1274">
           <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
           <folding>
             <element signature="e#187#204#0#PHP" expanded="true" />
@@ -1077,17 +1025,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RealtimeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="131" column="54" selection-start-line="131" selection-start-column="54" selection-end-line="131" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/FareController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1318">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="229">
+            <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
